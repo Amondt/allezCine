@@ -1,6 +1,6 @@
 <template>
     <div>
-        HOME PAGE
+        HOME PAGE 
     </div>
 </template>
 
