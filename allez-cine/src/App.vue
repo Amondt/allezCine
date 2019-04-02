@@ -8,8 +8,8 @@
 </template>
 
 <script>
-import Header from './Header/Header.vue'
-import Footer from './Footer/Footer.vue'
+import Header from './header/Header.vue'
+import Footer from './footer/Footer.vue'
 
 export default {
   name: 'app',
