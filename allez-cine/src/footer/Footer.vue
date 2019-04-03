@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="footer">
         Coucou
     </div>
 </template>
@@ -10,6 +10,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+    #footer {
+        background-color: rgb(4, 72, 88);
+        color: rgb(3, 3, 3);
+        height: 300px;
+    }
 
 </style>
