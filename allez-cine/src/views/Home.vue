@@ -2,7 +2,7 @@
     <div id="main">
         <h2 class='title'>Films</h2>
         <div class="container">
-            <FilmCard v-for="(i, index) in 10" :key='index' :film="resultsMov[i]" @click="displayDetails" />
+            <FilmCard v-for="(i, index) in 10" :key='index' :film="resultsMov[i]" />
         </div>
         <h2 class='title'>Series</h2>
         <div class="container">
@@ -27,7 +27,7 @@ export default {
             resultsSer: null
         }
     },
-    mounted () {
+    created () {
         this.resultsMov = getDataTmdb('movie', 'en', 'popularity.desc', '1')
         this.resultsSer = getDataTmdb('tv', 'en', 'popularity.desc', '1')
     }
