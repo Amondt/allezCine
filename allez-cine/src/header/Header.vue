@@ -3,11 +3,11 @@
          
         <div id="navbar">
             <img src="../assets/logo.png" alt="logo" height="42" width="42">
-            <nav  v-on:click.prevent>
+            <nav>
                
-                <router-link to='/home' class="home" v-on:click="makeActive('home')">Home</router-link>
-                <router-link to='/films' class="projects" v-on:click="makeActive('projects')">Films Populaires</router-link>
-                <router-link to='/series' class="services" v-on:click="makeActive('services')">Séries TV</router-link>
+                <router-link to='/home' id="home" :class="['home']">Home</router-link>
+                <router-link to='/films' id="films" :class="['films']">Films Populaires</router-link>
+                <router-link to='/series' id="series" :class="['series']">Séries TV</router-link>
             </nav>
             <div class="search">
                 <input type="search" id="site-search" name="q"
@@ -24,6 +24,7 @@
 import Carousel from '../components/Carousel.vue'
 
 export default {
+    name: 'home',
     components: {Carousel}
 }
 </script>
@@ -93,8 +94,8 @@ nav a:last-child{
 }
 
 nav.home .home,
-nav.projects .projects,
-nav.services .services,
+nav.films .films,
+nav.series .series,
 nav.contact .contact{
 	background-color:#e35885;
 }
@@ -118,7 +119,7 @@ p b{
   margin: 20px 0;
 }
 
-.home {
+.router-link-exact-active {
     color: red!important;
 }
 
