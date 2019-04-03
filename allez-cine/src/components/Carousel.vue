@@ -72,10 +72,9 @@ export default {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: rgb(71, 71, 71);
-  width: 78em;
+  
+  width: 24em;
   min-height: 25em;
-  margin-top: 12px;
 }
 .slide {
   flex: 0 0 20em;
