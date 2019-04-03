@@ -7,8 +7,10 @@ import Series from './views/Series.vue'
 import DetailsSheet from './views/DetailsSheet.vue'
 
 import VueRouter from 'vue-router'
+import axios from 'axios'
 
 Vue.use(VueRouter)
+Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
 

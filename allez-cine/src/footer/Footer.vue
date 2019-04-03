@@ -8,31 +8,31 @@
             <h1><span>ALLEZ</span>CINE!</h1>
             
             <div id='lowerbar-wrapper' style="margin-left:200px;">
-            <b:section class='lowerbar' id='lowerbar1' preferred='yes'>
+            <b class='lowerbar' id='lowerbar1' preferred='yes'>
             <h2>LES FONDAMENTAUX</h2><br>
             <a href="#" class="home" v-on:click="makeActive('home')">A propos de AllezCine</a><br>
             <a href="#" class="home" v-on:click="makeActive('home')">Contactez-nous</a><br>
             <a href="#" class="home" v-on:click="makeActive('home')">Forum d'aide</a><br>
-            </b:section>
+            </b>
             </div>
 
 
             <div id='lowerbar-wrapper'>
-            <b:section class='lowerbar' id='lowerbar2' preferred='yes'>
+            <b class='lowerbar' id='lowerbar2' preferred='yes'>
             <h2>COMMUNAUTE</h2><br>
             <a href="#" class="home" v-on:click="makeActive('home')">A propos de AllezCine</a><br>
             <a href="#" class="home" v-on:click="makeActive('home')">Contactez-nous</a><br>
             <a href="#" class="home" v-on:click="makeActive('home')">Forum d'aide</a><br>
-            </b:section>
+            </b>
             </div>
 
 
             <div id='lowerbar-wrapper'>
-            <b:section class='lowerbar' id='lowerbar3' preferred='yes'>
+            <b class='lowerbar' id='lowerbar3' preferred='yes'>
             <h2>LEGAL</h2><br>
             <a href="#" class="home" v-on:click="makeActive('home')">Conditions d'utilisation</a><br>
             <a href="#" class="home" v-on:click="makeActive('home')">Politique de confidentialité</a><br>
-            </b:section>
+            </b>
             </div>
 
             <div style='clear: both;'/>

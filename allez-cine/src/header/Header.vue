@@ -3,7 +3,7 @@
          
         <div id="navbar">
             <img src="../assets/logo.png" alt="logo" height="42" width="42">
-            <nav v-bind:class="active" v-on:click.prevent>
+            <nav  v-on:click.prevent>
                
                <router-link to='/home' class="home" v-on:click="makeActive('home')">Home</router-link>
                 <router-link to='/films' class="projects" v-on:click="makeActive('projects')">Films Populaires</router-link>
