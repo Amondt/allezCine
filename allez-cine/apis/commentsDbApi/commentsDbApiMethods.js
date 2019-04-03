@@ -1,5 +1,5 @@
 export function getComments (filmId) {
-    let req = new XMLHttpRequest('GET', `localhost:8888/getdata.php?filmId=${filmId}`, false)
+    let req = new XMLHttpRequest('GET', `localhost:8888/test-php/back-end/getdata.php?filmId=${filmId}`, false)
     req.send(null)
 
     if (req.status === 200) {
