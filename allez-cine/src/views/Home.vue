@@ -1,6 +1,6 @@
 <template>
-    <div>
-        HOME PAGE
+    <div id="main">
+        
     </div>
 </template>
 
@@ -10,6 +10,10 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+    #main {
+        background-color: rgb(255, 255, 255);
+        height: 500px;
+    }
 
 </style>
