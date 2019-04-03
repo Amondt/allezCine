@@ -20,3 +20,14 @@ export function createComment (filmId, title, comment) {
         return console.log("Status de la réponse: %d (%s)", req.status, req.statusText)
     }
 }
+
+export function deleteComment (commentId) {
+    let req = new XMLHttpRequest('GET', `10.20.1.37/allez-cine/remComment.php?id=${commentId}`, false)
+    req.send(null)
+
+    if (req.status === 200) {
+        return JSON.parse(req.response)
+    } else {
+        return console.log("Status de la réponse: %d (%s)", req.status, req.statusText)
+    }
+}
