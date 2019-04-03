@@ -1,6 +1,6 @@
 <template>
     <div>
-        Au revoir
+    
     </div>
 </template>
 
@@ -11,5 +11,6 @@ export default {
 </script>
 
 <style>
+
 
 </style>
