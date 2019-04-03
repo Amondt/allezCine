@@ -5,13 +5,13 @@
             <img src="../assets/logo.png" alt="logo" height="42" width="42">
             <nav  v-on:click.prevent>
                
-               <router-link to='/home' class="home" v-on:click="makeActive('home')">Home</router-link>
+                <router-link to='/home' class="home" v-on:click="makeActive('home')">Home</router-link>
                 <router-link to='/films' class="projects" v-on:click="makeActive('projects')">Films Populaires</router-link>
                 <router-link to='/series' class="services" v-on:click="makeActive('services')">Séries TV</router-link>
             </nav>
             <div class="search">
                 <input type="search" id="site-search" name="q"
-                aria-label="Search through site content">
+                aria-label="Search through site content" placeholder="Search">
                 <button>Search</button>
             </div>
             
@@ -148,6 +148,9 @@ button {
     color: #ffffff;
     font-size: 1.2em;
     border: none;
+    border-radius: 3px;
+    padding: 10px;
+    height: 44px;
     transition: all 1s ease 0s;
 }
 button:hover {
@@ -167,5 +170,15 @@ button:hover {
     align-items: baseline;
 }
 
+#site-search {
+    border-radius: 3px;
+    padding: 10px;
+    transition: .2s;
+    width: 250px;
+}
+
+#site-search:focus {
+    width: 500px;
+}
 
 </style>
