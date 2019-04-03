@@ -94,7 +94,9 @@ export default {
 .slide:last-of-type {
   opacity: 0;
 }
-
+div.slide{
+    width:400px!important;
+}
 
 button  {
     margin-top: 12px;
