@@ -1,31 +1,62 @@
 <template>
     <div id="main">
-        Test
-        <div v-for="(result, index) in results" :key='index'>
-            {{ result.title }} <br>
+        <h2 class='title'>Films</h2>
+        <div class="container">
+            <FilmCard v-for="(i, index) in 10" :key='index' :film="resultsMov[i]" @click="displayDetails" />
+        </div>
+        <h2 class='title'>Series</h2>
+        <div class="container">
+            <FilmCard v-for="(i, index) in 10" :key='index' :film="resultsSer[i]" />
         </div>
     </div>
 </template>
 
 <script>
+
 import { getDataTmdb } from '../../apis/tmdbApi/tmdbApiMethods.js'
+import FilmCard from '../components/FilmCard.vue'
 
 export default {
     name: 'home',
+    components: {
+        FilmCard
+    },
     data () {
         return {
-            results: null
+            resultsMov: null,
+            resultsSer: null
         }
     },
     mounted () {
-        this.results = getDataTmdb('movie', 'en', 'popularity.desc', '1')
+        this.resultsMov = getDataTmdb('movie', 'en', 'popularity.desc', '1')
+        this.resultsSer = getDataTmdb('tv', 'en', 'popularity.desc', '1')
     }
 }
 </script>
 
 <style scoped>
-    #main {
-        background-color: rgb(255, 255, 255);
-    }
+
+#main {
+    background-color: rgb(255, 255, 255);
+}
+
+.title {
+    margin: 60px 150px 40px 150px;
+    text-align: left;
+    border-left: 5px solid red;
+    padding-left: 10px;
+}
+
+.center {
+    display: block;
+    margin: auto;
+}
+
+.container {
+    margin: 20px 200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
 </style>
