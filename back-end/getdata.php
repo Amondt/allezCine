@@ -4,7 +4,7 @@
 
     if (isset($_GET['filmId'])){
         $req = $pdo -> prepare ('SELECT * FROM `cine` WHERE filmId=:filmID');
-        $freq -> execute ([':filmID' => htmlspecialchars($_GET['filmId'])]);
+        $req -> execute ([':filmID' => htmlspecialchars($_GET['filmId'])]);
     }
 
     $rows = array();
