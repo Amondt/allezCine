@@ -1,5 +1,5 @@
 <template>
-    <div id="card" @click="displayDetails">
+    <div id="card" @click="displayDetails" class='md-elevation-4'>
         <img :src="this.imageSrc" alt="">
         <h3>{{ film.title }}</h3>
         <p>{{ film.release_date }}</p>
@@ -30,7 +30,7 @@ export default {
 
 <style scoped>
 #card {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

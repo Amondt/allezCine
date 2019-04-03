@@ -37,7 +37,7 @@ export default {
 <style scoped>
 
 #main {
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
 }
 
 .title {
@@ -55,8 +55,7 @@ export default {
 .container {
     margin: 20px 200px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
 
 </style>
