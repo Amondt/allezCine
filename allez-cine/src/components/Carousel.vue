@@ -11,8 +11,8 @@
       </div>
     </transition-group>
     <div class='carousel-controls'>
-      <button class='carousel-controls__button' @click="previous">prev</button>
-      <button class='carousel-controls__button' @click="next">next</button>
+      <button class='button1' @click="previous">⇦</button>
+      <button class='button1' @click="next">⇨</button>
     </div>
   </div>
 </template>
@@ -60,8 +60,9 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .carousel-view {
+    width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,9 +72,10 @@ export default {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  
-  width: 24em;
+  background-color: rgb(71, 71, 71);
+  width: 78em;
   min-height: 25em;
+  margin-top: 12px;
 }
 .slide {
   flex: 0 0 20em;
@@ -83,13 +85,42 @@ export default {
   justify-content: center;
   align-items: center;
   border: 0.1em dashed #000;
-  border-radius: 50%;
-  transition: transform 0.3s ease-in-out;
+  border-radius: 0%;
+  transition: transform 1.3s ease-in-out;
 }
 .slide:first-of-type {
   opacity: 0;
 }
 .slide:last-of-type {
   opacity: 0;
+}
+
+
+button  {
+    margin-top: 12px;
+    width: 100px;
+    color: #494949 !important;
+    text-transform: uppercase;
+    background: #ffffff;
+    padding: 0px;
+    border: 1px solid #494949 !important;
+    border-radius: 6px;
+    display: inline-block;
+    font-size: 2em;
+    
+}
+
+
+button:hover {
+color: #ffffff !important;
+background: #b9b9b8;
+border-color: #575655 !important;
+transition: all 0.4s ease 0s;
+}
+@media all and (max-width:30em){
+ a.button{
+    display: block;
+    margin: 0.4em auto;
+}
 }
 </style>

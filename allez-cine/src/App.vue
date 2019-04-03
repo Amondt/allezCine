@@ -10,7 +10,7 @@
 <script>
 import Header from './header/Header.vue'
 import Footer from './footer/Footer.vue'
-// import Caousel from './components/Carousel.vue'
+
 
 export default {
   name: 'app',

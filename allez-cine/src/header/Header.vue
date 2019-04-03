@@ -1,30 +1,43 @@
 <template>
     <div id="header">
+         
         <div id="navbar">
+            <img src="../assets/logo.png" alt="logo" height="42" width="42">
             <nav v-bind:class="active" v-on:click.prevent>
-                <a href="#" class="home" v-on:click="makeActive('home')">Home</a>
-                <a href="#" class="projects" v-on:click="makeActive('projects')">Films Populaires</a>
-                <a href="#" class="services" v-on:click="makeActive('services')">Séries TV</a>
+               
+               <router-link to='/home' class="home" v-on:click="makeActive('home')">Home</router-link>
+                <router-link to='/films' class="projects" v-on:click="makeActive('projects')">Films Populaires</router-link>
+                <router-link to='/series' class="services" v-on:click="makeActive('services')">Séries TV</router-link>
             </nav>
             <div class="search">
                 <input type="search" id="site-search" name="q"
                 aria-label="Search through site content">
                 <button>Search</button>
             </div>
+            
         </div>
+        <Carousel />
     </div>
 </template>
 
 <script>
-export default {
+import Carousel from '../components/Carousel.vue'
 
+export default {
+    components: {Carousel}
 }
 </script>
 
 <style scoped>
+img {
+    margin-left: 20px;
+    margin-top: 15px;
+    float: left;
+}
+
 #header {
     background-color: rgb(0, 0, 0);
-    height: 80px;
+    height: 560px;
     color: #ffffff;
 }
 a, a:visited {
@@ -36,6 +49,7 @@ a:hover{
 	text-decoration:none;
     background-color: red;
     color: #000000!important;
+    transition: all 1s ease 0s;
 }
 
 section, footer, header, aside, nav{
@@ -134,6 +148,7 @@ button {
     color: #ffffff;
     font-size: 1.2em;
     border: none;
+    transition: all 1s ease 0s;
 }
 button:hover {
     background: #ED213A;  /* fallback for old browsers */
