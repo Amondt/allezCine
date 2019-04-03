@@ -10,17 +10,23 @@
 <script>
 import Header from './header/Header.vue'
 import Footer from './footer/Footer.vue'
+// import Caousel from './components/Carousel.vue'
 
 export default {
   name: 'app',
   components: {
     Header,
-    Footer
+    Footer,
+    // Carousel
   }
 }
 </script>
 
 <style>
+body {
+  margin: 0;
+  padding: 0;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

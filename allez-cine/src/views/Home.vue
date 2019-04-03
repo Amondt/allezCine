@@ -12,7 +12,7 @@ export default {
 
 <style scoped>
     #main {
-        background-color: blueviolet;
+        background-color: rgb(255, 255, 255);
         height: 500px;
     }
 
