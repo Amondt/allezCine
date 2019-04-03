@@ -3,8 +3,8 @@
     require './pdo.php';
 
     if (isset($_GET['filmId'])){
-        $req = $pdo -> prepare ('SELECT * FROM `cine` WHERE filmId=:filmID');
-        $req -> execute ([':filmID' => htmlspecialchars($_GET['filmId'])]);
+        $req = $pdo -> prepare ('SELECT * FROM `cine` WHERE filmId=:filmId');
+        $req -> execute ([':filmId' => htmlspecialchars($_GET['filmId'])]);
     }
 
     $rows = array();

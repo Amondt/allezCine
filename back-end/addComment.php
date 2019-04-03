@@ -1,13 +1,16 @@
-<?php
+
+<?php 
     require './headersettings.php';
     require './pdo.php';
 
-    $stmt = $pdo->prepare("INSERT INTO todo (todoTitle, todoDescription) VALUES (:todoTitle, :todoDescription)");
-    $todoTitle = $_GET['todoTitle'];
-    $todoDescription = $_GET['todoDescription'];
-    $stmt->execute([
-        'todoTitle' => $todoTitle,
-        'todoDescription' => $todoDescription,
-    ]);
+    if (isset($_GET['filmId']) && isset($_GET['title']) && isset($_GET['comment'])){
+        $req = $pdo -> prepare ('INSERT INTO `cine` (filmId, titleComment, descriptionComment, counterComment) VALUES (:filmId, :titleComment, :descriptionComment, :counterComment)');
+        $req -> execute ([
+            ':filmId' => htmlspecialchars($_GET['filmId']),
+            ':titleComment' => htmlspecialchars($_GET['title']),
+            ':descriptionComment' => htmlspecialchars($_GET['comment']),
+            ':counterComment' => htmlspecialchars(0)
+        ]);
+    }
     print json_encode($_GET);
 ?>
