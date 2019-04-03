@@ -2,10 +2,13 @@
     require './headersettings.php';
     require './pdo.php';
 
-    $sql = "SELECT * FROM cine";
-    $result = $pdo->query($sql);
+    if (isset($_GET['filmId'])){
+        $req = $pdo -> prepare ('SELECT * FROM `cine` WHERE filmId=:filmID');
+        $freq -> execute ([':filmID' => htmlspecialchars($_GET['filmId'])]);
+    }
+
     $rows = array();
-     while($r = $result->fetch(PDO::FETCH_ASSOC)) {
+     while($r = $req->fetch(PDO::FETCH_ASSOC)) {
          array_push($rows, $r);
     }
    print json_encode($rows);
