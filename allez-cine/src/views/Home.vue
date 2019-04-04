@@ -1,13 +1,19 @@
 <template>
     <div id="main">
-        <h2 class='title'>Films</h2>
-        <div class="container">
-            <FilmCard v-for="(i, index) in 10" :key='index' :film="resultsMov[i-1]" />
+        <div v-if="resultsMov">
+            <h2 class='title'>Films</h2>
+            <div class="container">
+                <FilmCard v-for="(i, index) in 10" :key='index' :film="resultsMov[i-1]" />
+            </div>
         </div>
-        <h2 class='title'>Series</h2>
-        <div class="container">
-            <FilmCard v-for="(i, index) in 10" :key='index' :film="resultsSer[i-1]" />
+        <div v-else>Loading...</div>
+        <div v-if="resultsSer">
+            <h2 class='title'>Series</h2>
+            <div class="container">
+                <FilmCard v-for="(i, index) in 10" :key='index' :film="resultsSer[i-1]" />
+            </div>
         </div>
+        <div v-else>Loading...</div>
     </div>
 </template>
 
@@ -28,7 +34,7 @@ export default {
             resultsSer: null
         }
     },
-    created () {
+    mounted () {
         this.resultsMov = getDataTmdbMov('en', 'vote_average.desc', '1')
         this.resultsSer = getDataTmdbSer('en', 'vote_average.desc', '1')
     }
