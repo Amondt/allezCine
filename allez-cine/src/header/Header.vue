@@ -38,7 +38,7 @@ img {
 
 #header {
     background-color: rgb(0, 0, 0);
-    height: 560px;
+    height: 540px;
     color: #ffffff;
 }
 a, a:visited {
