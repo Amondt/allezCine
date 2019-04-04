@@ -3,15 +3,21 @@
          
         <div id="navbar">
             <img src="../assets/logo.png" alt="logo" height="42" width="42">
-            <nav v-bind:class="active" v-on:click.prevent>
+            <nav>
                
+<<<<<<< HEAD
                 <router-link to='/home' class="home" v-on:click="makeActive('home')">Home</router-link>
                 <router-link to='/films' class="projects" v-on:click="makeActive('projects')">Films Populaires</router-link>
                 <router-link to='/series' class="services" v-on:click="makeActive('services')">Séries TV</router-link>
+=======
+                <router-link to='/home' id="home" :class="['home']">Home</router-link>
+                <router-link to='/films' id="films" :class="['films']">Films Populaires</router-link>
+                <router-link to='/series' id="series" :class="['series']">Séries TV</router-link>
+>>>>>>> 91e4a5f2cfc4bf9de722894f0ff479ac30ece62c
             </nav>
             <div class="search">
                 <input type="search" id="site-search" name="q"
-                aria-label="Search through site content">
+                aria-label="Search through site content" placeholder="Search">
                 <button>Search</button>
             </div>
             
@@ -24,6 +30,7 @@
 import Carousel from '../components/Carousel.vue'
 
 export default {
+    name: 'home',
     components: {Carousel}
 }
 </script>
@@ -104,8 +111,8 @@ nav a:last-child{
 }
 
 nav.home .home,
-nav.projects .projects,
-nav.services .services,
+nav.films .films,
+nav.series .series,
 nav.contact .contact{
 	background-color:#e35885;
 }
@@ -129,8 +136,13 @@ p b{
   margin: 20px 0;
 }
 
+<<<<<<< HEAD
 .home {
     color: #ffffff;
+=======
+.router-link-exact-active {
+    color: red!important;
+>>>>>>> 91e4a5f2cfc4bf9de722894f0ff479ac30ece62c
 }
 
 label {
@@ -159,6 +171,9 @@ button {
     color: #ffffff;
     font-size: 1.2em;
     border: none;
+    border-radius: 3px;
+    padding: 10px;
+    height: 44px;
     transition: all 1s ease 0s;
 }
 button:hover {
@@ -178,5 +193,15 @@ button:hover {
     align-items: baseline;
 }
 
+#site-search {
+    border-radius: 3px;
+    padding: 10px;
+    transition: .2s;
+    width: 250px;
+}
+
+#site-search:focus {
+    width: 500px;
+}
 
 </style>
