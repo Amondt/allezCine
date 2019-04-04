@@ -12,48 +12,37 @@
                 Loading...
             </div>
         </div>
-        <div id="comments">
-            <h2>Commentaires</h2>
-            <form action="" method="post" id="addCom">
-                <input type="text" name="title" placeholder="Titre">
-                <textarea type="text" name="comment" placeholder="Commentaire"></textarea>
-                <button type="submit" id="submitBtn">Ajouter le commentaire</button>
-            </form>
-            <div v-if="comments">
-                <div v-for="(comment, index) in comments" :key="index" class="comment">
-                    <h3>{{ comment.titleComment }}</h3>
-                    <p>{{ comment.descriptionComment }}</p>
-                    <p>{{ comment.dateComment }}</p>
-                    <span>{{ comment.counterComment }}</span>
-                </div>
-            </div>
-            <div v-else>
-                Loading...
-            </div>
-        </div>
+        <Commentaries :key="commentKey" :forceRerender="forceRerender"/>
     </div>
 </template>
 
 <script>
 
 import { getDetailsTmdb } from '../../apis/tmdbApi/tmdbApiMethods.js'
-import { getComments, createComment, deleteComment } from '../../apis/commentsDbApi/commentsDbApiMethods.js'
+import Commentaries from '../components/Commentaries.vue'
 
 export default {
     name: 'detail',
+    components: {
+        Commentaries
+    },
     data () {
         return {
             result: null,
-            comments: null,
+            commentKey: 0
         }
     },
     mounted () {
-        this.result = getDetailsTmdb(this.$route.params.type, this.$route.params.filmId, 'en'),
-        this.comments = getComments(this.$route.params.filmId)
+        this.result = getDetailsTmdb(this.$route.params.type, this.$route.params.filmId, 'en')
     },
     computed: {
         imageSrc () {
             return `https://image.tmdb.org/t/p/w500/${this.result ? this.result.poster_path : ''}`
+        }
+    },
+    methods: {
+        forceRerender() {
+        this.commentKey += 1;  
         }
     }
 }
@@ -64,4 +53,5 @@ export default {
 img {
     width: 200px;
 }
+
 </style>
