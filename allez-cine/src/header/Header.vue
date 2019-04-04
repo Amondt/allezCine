@@ -31,8 +31,8 @@ export default {
 
 <style scoped>
 img {
-    margin-left: 20px;
-    margin-top: 15px;
+    margin-left: 23px;
+    margin-top: 30px;
     float: left;
 }
 
@@ -63,7 +63,7 @@ section, footer, header, aside, nav{
 --------------------------*/
 
 nav {
-    margin: 13px auto 0px;
+    margin: 28px auto 0px;
     background-color: #000000;
     border-radius: 2px;
     float: left;
