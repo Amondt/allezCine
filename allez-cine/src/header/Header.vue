@@ -38,18 +38,19 @@ img {
 
 #header {
     background-color: rgb(0, 0, 0);
-    height: 560px;
+    height: 540px;
     color: #ffffff;
 }
 a, a:visited {
 	outline:none;
-	color:#389dc1;
+	color:red;
 }
 
 a:hover{
-	text-decoration:none;
+	text-decoration:underline;
+    border: #e35885;
     background-color: red;
-    color: #000000!important;
+    color: #ffffff!important;
     transition: all 1s ease 0s;
 }
 
@@ -83,6 +84,16 @@ nav a{
 	-webkit-transition:background-color 0.25s;
 	-moz-transition:background-color 0.25s;
 	transition:background-color 0.25s;
+}
+
+nav a:hover{
+    text-decoration:underline!important;
+    border: 10px red;
+    border-color: red;
+    background-color: transparent;
+    color: red!important;
+    transition: all 1s ease 0s;
+
 }
 
 nav a:first-child{

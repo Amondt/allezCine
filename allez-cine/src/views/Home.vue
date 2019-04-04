@@ -37,9 +37,7 @@ export default {
 
 <style scoped>
 
-#main {
-    /* background-color: rgb(255, 255, 255); */
-}
+
 
 .title {
     margin: 60px 150px 40px 150px;
