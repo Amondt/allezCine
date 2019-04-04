@@ -42,7 +42,8 @@ const routes = [
         path: '/details/:filmId',
         name: 'details',
         component: DetailsSheet
-    }
+    },
+        
 ]
 
 const router = new VueRouter({
