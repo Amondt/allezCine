@@ -7,7 +7,7 @@
             
             <h1><span>ALLEZ</span>CINE!</h1>
             
-            <div id='lowerbar-wrapper' style="margin-left:200px;">
+            <div id='lowerbar-wrapper'>
             <b class='lowerbar' id='lowerbar1' preferred='yes'>
             <h2>LES FONDAMENTAUX</h2><br>
             <a href="#" class="home" v-on:click="makeActive('home')">A propos de AllezCine</a><br>
@@ -87,7 +87,7 @@ export default {
     float: left;
     margin: 0px 5px auto;
     padding-bottom: 20px;
-    width: 300px;
+    /* width: 300px; */
     text-align: justify;
     color:rgb(255, 255, 255);
     font: normal 16px Arial, Tahoma, Verdana;

@@ -89,8 +89,8 @@ div.slide {
 .slide[data-v-e3565ce0] {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 20em;
-    flex: 0 0 100em;
-    height: 26em;
+    flex: 0 0 0em;
+    height: 100%;
     margin: 1em;
     display: -webkit-box;
     display: -ms-flexbox;
