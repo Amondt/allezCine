@@ -1,6 +1,6 @@
 <template>
     <div id="card" @click="displayDetails" class='md-elevation-4'>
-        <img :src="this.imageSrc" alt="">
+        <img :src="this.imageSrc" alt="film poster">
         <h3>{{ film.title || film.name }}</h3>
         <p>{{ film.release_date || film.first_air_date }}</p>
     </div>
