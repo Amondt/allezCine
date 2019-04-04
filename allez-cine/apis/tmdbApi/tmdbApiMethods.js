@@ -40,7 +40,8 @@ export function getDataTmdbSer(lang, sort, page) {
 }
 
 export function getDetailsTmdb(type, id, lang) {
-    const req = new XMLHttpRequest('GET', `https://api.themoviedb.org/3/${type}/${id}?api_key=ef3e4f89ddaa5395bacf44e7e324e0e9&language=${lang}`, false)
+    const req = new XMLHttpRequest()
+    req.open('GET', `https://api.themoviedb.org/3/${type}/${id}?api_key=ef3e4f89ddaa5395bacf44e7e324e0e9&language=${lang}`, false)
     req.send(null)
 
     if (req.status === 200) {

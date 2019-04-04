@@ -24,32 +24,33 @@
 import Carousel from '../components/Carousel.vue'
 
 export default {
-    name: 'home',
+    name: 'header',
     components: {Carousel}
 }
 </script>
 
 <style scoped>
 img {
-    margin-left: 20px;
-    margin-top: 15px;
+    margin-left: 23px;
+    margin-top: 30px;
     float: left;
 }
 
 #header {
     background-color: rgb(0, 0, 0);
-    height: 560px;
+    height: 540px;
     color: #ffffff;
 }
 a, a:visited {
 	outline:none;
-	color:#389dc1;
+	color:red;
 }
 
 a:hover{
-	text-decoration:none;
+	text-decoration:underline;
+    border: #e35885;
     background-color: red;
-    color: #000000!important;
+    color: #ffffff!important;
     transition: all 1s ease 0s;
 }
 
@@ -62,7 +63,7 @@ section, footer, header, aside, nav{
 --------------------------*/
 
 nav {
-    margin: 13px auto 0px;
+    margin: 28px auto 0px;
     background-color: #000000;
     border-radius: 2px;
     float: left;
@@ -83,6 +84,16 @@ nav a{
 	-webkit-transition:background-color 0.25s;
 	-moz-transition:background-color 0.25s;
 	transition:background-color 0.25s;
+}
+
+nav a:hover{
+    text-decoration:underline!important;
+    border: 10px red;
+    border-color: red;
+    background-color: transparent;
+    color: red!important;
+    transition: all 1s ease 0s;
+
 }
 
 nav a:first-child{

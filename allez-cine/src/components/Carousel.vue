@@ -11,8 +11,8 @@
       </div>
     </transition-group>
     <div class='carousel-controls'>
-      <button class='button1' @click="previous">⇦</button>
-      <button class='button1' @click="next">⇨</button>
+      <button class='button1' @click="previous">≺</button>
+      <button class='button1' @click="next">≻</button>
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
     return {
       slides: [
         {
-          title: 'I am Slide A',
+          title: 'LASTEST ONLINE MOVIES ',
           id: 1
         },
         {
@@ -61,6 +61,16 @@ export default {
 
 
 <style scoped>
+
+div.carousel {
+    width: 100vw;
+    background-color: blue;
+}
+
+div.slide {
+    width: 100vw;
+}
+
 .carousel-view {
     width: 100vw;
   display: flex;
@@ -72,21 +82,35 @@ export default {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  
   width: 24em;
   min-height: 25em;
 }
-.slide {
-  flex: 0 0 20em;
-  height: 20em;
-  margin: 1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 0.1em dashed #000;
-  border-radius: 0%;
-  transition: transform 1.3s ease-in-out;
+
+.slide[data-v-e3565ce0] {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 20em;
+    flex: 0 0 0em;
+    height: 100%;
+    margin: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 0.1em dashed #000;
+    border-radius: 0%;
+    -webkit-transition: -webkit-transform 1.3s ease-in-out;
+    transition: -webkit-transform 1.3s ease-in-out;
+    transition: transform 1.3s ease-in-out;
+    transition: transform 1.3s ease-in-out, -webkit-transform 1.3s ease-in-out;
 }
+
+
+
 .slide:first-of-type {
   opacity: 0;
 }
@@ -99,7 +123,7 @@ div.slide{
 
 button  {
     margin-top: 12px;
-    width: 100px;
+    width: 80px;
     color: #494949 !important;
     text-transform: uppercase;
     background: #ffffff;
@@ -107,7 +131,8 @@ button  {
     border: 1px solid #494949 !important;
     border-radius: 6px;
     display: inline-block;
-    font-size: 2em;
+    font-size: 1.5em;
+    font-weight: 900;
     
 }
 
