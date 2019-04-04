@@ -5,7 +5,7 @@
             <img src="../assets/logo.png" alt="logo" height="42" width="42">
             <nav v-bind:class="active" v-on:click.prevent>
                
-               <router-link to='/home' class="home" v-on:click="makeActive('home')">Home</router-link>
+                <router-link to='/home' class="home" v-on:click="makeActive('home')">Home</router-link>
                 <router-link to='/films' class="projects" v-on:click="makeActive('projects')">Films Populaires</router-link>
                 <router-link to='/series' class="services" v-on:click="makeActive('services')">Séries TV</router-link>
             </nav>
@@ -42,13 +42,14 @@ img {
 }
 a, a:visited {
 	outline:none;
-	color:#389dc1;
+	color:red;
 }
 
 a:hover{
-	text-decoration:none;
+	text-decoration:underline;
+    border: #e35885;
     background-color: red;
-    color: #000000!important;
+    color: #ffffff!important;
     transition: all 1s ease 0s;
 }
 
@@ -82,6 +83,16 @@ nav a{
 	-webkit-transition:background-color 0.25s;
 	-moz-transition:background-color 0.25s;
 	transition:background-color 0.25s;
+}
+
+nav a:hover{
+    text-decoration:underline!important;
+    border: 10px red;
+    border-color: red;
+    background-color: transparent;
+    color: red!important;
+    transition: all 1s ease 0s;
+
 }
 
 nav a:first-child{
@@ -119,7 +130,7 @@ p b{
 }
 
 .home {
-    color: red!important;
+    color: #ffffff;
 }
 
 label {
