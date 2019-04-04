@@ -11,7 +11,8 @@ export default {
     name: 'card',
     data () {
         return {
-            imageSrc: `https://image.tmdb.org/t/p/w500/${this.film.poster_path}`
+            imageSrc: `https://image.tmdb.org/t/p/w500/${this.film.poster_path}`,
+            type: (this.film.title ? 'movie' : 'tv')
         }
     },
     props: {
@@ -21,7 +22,7 @@ export default {
     },
     methods: {
         displayDetails() {
-            this.$router.push(`/details/${this.film.id}`)
+            this.$router.push(`/details/${this.type}/${this.film.id}`)
         }
     }
 }
