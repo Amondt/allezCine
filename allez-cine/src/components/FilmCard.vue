@@ -16,8 +16,7 @@ export default {
     },
     props: {
         film: {
-            type: Object,
-            default: false
+            type: Object
         }
     },
     methods: {
