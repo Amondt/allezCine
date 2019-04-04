@@ -43,8 +43,11 @@ export default {
 
 <style scoped>
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> feature-front
 .title {
     margin: 60px 150px 40px 150px;
     text-align: left;

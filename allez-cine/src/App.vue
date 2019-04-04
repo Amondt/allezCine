@@ -3,6 +3,7 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <Header/>
     <router-view/>
+    <Social/>
     <Footer/>
   </div>
 </template>
@@ -10,6 +11,7 @@
 <script>
 import Header from './header/Header.vue'
 import Footer from './footer/Footer.vue'
+import Social from './social/Social.vue'
 
 
 export default {
@@ -17,7 +19,7 @@ export default {
   components: {
     Header,
     Footer,
-    // Carousel
+    Social
   }
 }
 </script>
