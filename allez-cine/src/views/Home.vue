@@ -2,18 +2,19 @@
     <div id="main">
         <h2 class='title'>Films</h2>
         <div class="container">
-            <FilmCard v-for="(i, index) in 10" :key='index' :film="resultsMov[i]" />
+            <FilmCard v-for="(i, index) in 10" :key='index' :film="resultsMov[i-1]" />
         </div>
         <h2 class='title'>Series</h2>
         <div class="container">
-            <FilmCard v-for="(i, index) in 10" :key='index' :film="resultsSer[i]" />
+            <FilmCard v-for="(i, index) in 10" :key='index' :film="resultsSer[i-1]" />
         </div>
     </div>
 </template>
 
 <script>
 
-import { getDataTmdb } from '../../apis/tmdbApi/tmdbApiMethods.js'
+import { getDataTmdbMov } from '../../apis/tmdbApi/tmdbApiMethods.js'
+import { getDataTmdbSer } from '../../apis/tmdbApi/tmdbApiMethods.js'
 import FilmCard from '../components/FilmCard.vue'
 
 export default {
@@ -28,8 +29,8 @@ export default {
         }
     },
     created () {
-        this.resultsMov = getDataTmdb('movie', 'en', 'popularity.desc', '1')
-        this.resultsSer = getDataTmdb('tv', 'en', 'popularity.desc', '1')
+        this.resultsMov = getDataTmdbMov('en', 'vote_average.desc', '1')
+        this.resultsSer = getDataTmdbSer('en', 'vote_average.desc', '1')
     }
 }
 </script>
