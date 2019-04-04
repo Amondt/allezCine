@@ -24,7 +24,7 @@
 import Carousel from '../components/Carousel.vue'
 
 export default {
-    name: 'home',
+    name: 'header',
     components: {Carousel}
 }
 </script>

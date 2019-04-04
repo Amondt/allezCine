@@ -39,7 +39,7 @@ const routes = [
         component: Series
     },
     {
-        path: '/details/:filmId',
+        path: '/details/:type/:filmId',
         name: 'details',
         component: DetailsSheet
     }
