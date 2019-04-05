@@ -61,6 +61,9 @@ export default {
 
 
 <style scoped>
+.md-field {
+  box-shadow: none;
+}
 
 div.carousel {
     width: 100%;
@@ -135,7 +138,6 @@ button  {
     font-weight: 900;
     
 }
-
 
 button:hover {
 color: #ffffff !important;

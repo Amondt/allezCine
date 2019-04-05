@@ -19,23 +19,25 @@ export default {
 <style scoped>
    
    #social {
+       z-index: 9999;
         background-color: hotpink;
         width: 200px;
         position: fixed;
-        top:35%;
+        top:400px;
         left: 0%;
         font-size: 2em;
    }
 
     #socialFb {
+        opacity: 1;
         text-align: right;
         height: 45px;
         width: 200px;
         position: fixed;
-        top: 31%;
-        left: -9%;
+        top: 600px;
+        left: -150px;
         background-color: #3b5998;
-        transition: 1s;
+        transition: 0.3s;
         border-radius: 50px;
         color:#ffffff;
     }
@@ -45,20 +47,21 @@ export default {
         height: 45px;
         width: 200px;
         position: fixed;
-        top: 31%;
-        left: -1%;
+        top: 600px;
+        left: -100px;
         background-color: #3b5998;
     }
 
     #socialTw {
+        opacity: 1;
         text-align: right;
         height: 45px;
         width: 200px;
         position: fixed;
-        top:38%;
-        left: -9%;
+        top:650px;
+        left: -150px;
         background-color: #00aced;
-        transition: 1s ;
+        transition: 0.3s ;
         border-radius: 50px;
         color: #ffffff;
     }
@@ -68,8 +71,8 @@ export default {
         height: 45px;
         width: 200px;
         position: fixed;
-        top:38%;
-        left: -1%;
+        top:650px;
+        left: -100px;
         background-color: #00aced;
     }
 

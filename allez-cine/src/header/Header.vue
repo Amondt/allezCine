@@ -2,7 +2,7 @@
     <div id="header">
          
         <div id="navbar">
-            <img src="../assets/logo.png" alt="logo" height="42" width="42">
+           
             <nav>
                
                 <router-link to='/home' id="home" :class="['home']">Home</router-link>
