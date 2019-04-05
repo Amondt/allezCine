@@ -63,16 +63,16 @@ export default {
 <style scoped>
 
 div.carousel {
-    width: 100vw;
+    width: 100%;
     background-color: blue;
 }
 
 div.slide {
-    width: 100vw;
+    width: 100%;
 }
 
 .carousel-view {
-    width: 100vw;
+    width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -33,7 +33,7 @@ export default {
         width: 200px;
         position: fixed;
         top: 31%;
-        left: -11%;
+        left: -9%;
         background-color: #3b5998;
         transition: 1s;
         border-radius: 50px;
@@ -56,7 +56,7 @@ export default {
         width: 200px;
         position: fixed;
         top:38%;
-        left: -11%;
+        left: -9%;
         background-color: #00aced;
         transition: 1s ;
         border-radius: 50px;
