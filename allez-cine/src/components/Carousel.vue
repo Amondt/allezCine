@@ -28,19 +28,19 @@ export default {
           id: 1
         },
         {
-          title: 'I am Slide B',
+          title: 'LASTEST ONLINE MOVIES ',
           id: 2
         },
         {
-          title: 'I am Slide C',
+          title: 'LASTEST ONLINE MOVIES ',
           id: 3
         },
         {
-          title: 'I am Slide D',
+          title: 'LASTEST ONLINE MOVIES ',
           id: 4
         },
         {
-          title: 'I am Slide E',
+          title: 'LASTEST ONLINE MOVIES ',
           id: 5
         }
       ]
@@ -90,10 +90,11 @@ div.slide {
 }
 
 .slide[data-v-e3565ce0] {
+    background-color: aquamarine;
     -webkit-box-flex: 0;
-    -ms-flex: 0 0 20em;
-    flex: 0 0 0em;
-    height: 100%;
+    -ms-flex: 2 0 26em;
+    flex: 2 0 26em;
+    height: 400px;
     margin: 1em;
     display: -webkit-box;
     display: -ms-flexbox;

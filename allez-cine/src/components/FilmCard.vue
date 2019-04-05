@@ -14,7 +14,7 @@ export default {
     name: 'card',
     data () {
         return {
-            imageSrc: (this.film.poster_path ? `https://image.tmdb.org/t/p/w500/${this.film.poster_path}` : '../assets/not-aval.png'),
+            imageSrc: (this.film.poster_path ? `https://image.tmdb.org/t/p/w500/${this.film.poster_path}` : '/assets/salut.png'),
             type: (this.film.title ? 'movie' : 'tv')
         }
     },
@@ -40,7 +40,7 @@ export default {
     width: 140px;
     margin: 10px;
     border-radius: 3px;
-    background: #D5D8DC;
+    background: rgb(255, 255, 255);
 }
 img {
     width: 100%;
