@@ -73,7 +73,7 @@ nav {
 nav a{
     margin-left: 20px;
 	display:inline-block;
-	padding: 18px 30px;
+	padding: 15px 17px;
 	color:#fff !important;
 	font-weight:bold;
 	font-size:16px;
