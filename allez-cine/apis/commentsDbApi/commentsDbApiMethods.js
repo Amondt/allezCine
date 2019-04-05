@@ -1,7 +1,9 @@
 /* eslint-disable no-console */
+const url = 'http://10.20.1.37/allez-cine/';
+
 export function getComments (filmId) {
     const req = new XMLHttpRequest()
-    req.open('GET', `http://10.20.1.37/allez-cine/getdata.php?filmId=${filmId}`, false)
+    req.open('GET', `${url}getdata.php?filmId=${filmId}`, false)
     req.send(null)
 
     if (req.status === 200) {
@@ -13,7 +15,7 @@ export function getComments (filmId) {
 
 export function createComment (filmId, title, comment) {
     const req = new XMLHttpRequest()
-    req.open('GET', `http://10.20.1.37/allez-cine/addComment.php?filmId=${filmId}&title=${title}&comment=${comment}`, false)
+    req.open('GET', `${url}addComment.php?filmId=${filmId}&title=${title}&comment=${comment}`, false)
     req.send(null)
 
     if (req.status === 200) {
@@ -25,7 +27,7 @@ export function createComment (filmId, title, comment) {
 
 export function deleteComment (commentId) {
     const req = new XMLHttpRequest()
-    req.open('GET', `http://10.20.1.37/allez-cine/remComment.php?id=${commentId}`, false)
+    req.open('GET', `${url}remComment.php?id=${commentId}`, false)
     req.send(null)
 
     if (req.status === 200) {
