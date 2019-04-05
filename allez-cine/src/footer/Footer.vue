@@ -11,9 +11,9 @@
                 <div id='lowerbar-wrapper'>
                 <b class='lowerbar' id='lowerbar1' preferred='yes'>
                 <h2>LES FONDAMENTAUX</h2><br>
-                <a href="#" class="home" v-on:click="makeActive('home')">A propos de AllezCine</a><br>
-                <a href="#" class="home" v-on:click="makeActive('home')">Contactez-nous</a><br>
-                <a href="#" class="home" v-on:click="makeActive('home')">Forum d'aide</a><br>
+                <a href="#" class="home" >A propos de AllezCine</a><br>
+                <a href="#" class="home" >Contactez-nous</a><br>
+                <a href="#" class="home" >Forum d'aide</a><br>
                 </b>
                 </div>
 
@@ -21,9 +21,11 @@
                 <div id='lowerbar-wrapper'>
                 <b class='lowerbar' id='lowerbar2' preferred='yes'>
                 <h2>COMMUNAUTE</h2><br>
-                <a href="#" class="home" v-on:click="makeActive('home')">A propos de AllezCine</a><br>
-                <a href="#" class="home" v-on:click="makeActive('home')">Contactez-nous</a><br>
-                <a href="#" class="home" v-on:click="makeActive('home')">Forum d'aide</a><br>
+                <a href="#" class="home" >Règles</a><br>
+                <a href="#" class="home" >Classement</a><br>
+                <a href="#" class="home" >Forum</a><br>
+                <a href="#" class="home" >Twitter</a><br>
+                <a href="#" class="home" >Facebook</a><br>
                 </b>
                 </div>
 
@@ -31,8 +33,8 @@
                 <div id='lowerbar-wrapper'>
                 <b class='lowerbar' id='lowerbar3' preferred='yes'>
                 <h2>LEGAL</h2><br>
-                <a href="#" class="home" v-on:click="makeActive('home')">Conditions d'utilisation</a><br>
-                <a href="#" class="home" v-on:click="makeActive('home')">Politique de confidentialité</a><br>
+                <a href="#" class="home" >Conditions d'utilisation</a><br>
+                <a href="#" class="home" >Politique de confidentialité</a><br>
                 </b>
                 </div>
             </div>
@@ -77,7 +79,7 @@ export default {
     
     #lower {
     margin:auto;
-    padding: 10px 200px;
+    padding: 10px;
     width: 100%;
     background:#000000;
     }
