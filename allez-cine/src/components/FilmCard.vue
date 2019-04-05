@@ -41,6 +41,7 @@ export default {
     margin: 10px;
     border-radius: 3px;
     background: rgb(255, 255, 255);
+    box-shadow: 0 0px 0px 0px rgba(0,0,0,.2), 0 0px 1px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12)
 }
 img {
     width: 100%;
