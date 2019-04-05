@@ -11,6 +11,7 @@
 
 import { getDataTmdbMov } from '../../apis/tmdbApi/tmdbApiMethods.js'
 import FilmCard from '../components/FilmCard.vue'
+import infiniteScroll from "vue-infinite-scroll";
 
 export default {
 name: 'films',

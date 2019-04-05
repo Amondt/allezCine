@@ -4,7 +4,7 @@
         <div class="container">
             <FilmCard v-for="(serie, index) in results" :key='index' :film="serie" />
         </div> 
-    </div>  
+    </div> 
 </template>
 
 <script>
