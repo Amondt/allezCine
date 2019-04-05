@@ -1,10 +1,18 @@
+
+
+
+
+
+
+
+
+
 <template>
    
 
     <div id='lower'>
         <div id='lower-wrapper'>
-            <!-- <img src="../assets/IMG_7895.JPG" alt="Smiley face" height="42" width="42"> -->
-            
+           
             <h1><span>ALLEZ</span>CINE!</h1>
             
             <div id='lowerbar-wrapper'>
@@ -50,12 +58,7 @@ export default {
 </script>
 
 <style scoped>
-    /* #footer {
-        background-color: rgb(0, 0, 0);
-        color: rgb(255, 255, 255);
-        height: 300px;
-    } */
-     /*----- Advanced Multi Column Footer By www.mudwnp.blogspot.com -----*/
+    
 
     span {
         color: red;
@@ -81,7 +84,7 @@ export default {
     width: 80vw;
     border:0;
     }
-/*** change the background color below to 'none' to get ride of white color ***/ 
+
     #lowerbar-wrapper {
     background:rgb(0, 0, 0);
     float: left;
