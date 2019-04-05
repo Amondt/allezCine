@@ -6,7 +6,6 @@ export function getDataTmdbMov(lang, sort, page) {
     req.send(null)
 
     if (req.status === 200) {
-        console.log(req.response)
         let res = []
         JSON.parse(req.response).results.forEach(function(film) {
             if (film.poster_path !== null) {
@@ -26,7 +25,6 @@ export function getDataTmdbSer(lang, sort, page) {
     req.send(null)
 
     if (req.status === 200) {
-        console.log(req.response)
         let res = []
         JSON.parse(req.response).results.forEach(function(film) {
             if (film.poster_path !== null) {
