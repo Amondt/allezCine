@@ -168,6 +168,7 @@ button:hover {
 
 #site-search {
     border-radius: 66px;
+    border: none;
     padding: 2px;
     -webkit-transition: .2s;
     transition: .2s;
