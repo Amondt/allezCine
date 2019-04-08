@@ -1,9 +1,7 @@
 <template>
     <div id="header">   
-        <a class="menu-toggle">
-            <span class="fa fa-bars"></span>
-        </a>
         <div class="navbar" v-if="windowWidth > 500">
+            <i class="fas fa-bars" @click="menuClick"/>
             <nav>
                 <router-link to='/home' id="home" :class="['home']">Home</router-link>
                 <router-link to='/films' id="films" :class="['films']">Films Populaires</router-link>
