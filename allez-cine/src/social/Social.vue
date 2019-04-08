@@ -1,11 +1,16 @@
 <template>
     <div id="social">
+        <a href="https://www.facebook.com">
         <div id=socialFb>
            <i class="fab fa-facebook-f"></i>
         </div>
+        </a>
+        
+        <a href="https://www.twitter.com">
         <div id="socialTw">
             <i class="fab fa-twitter"></i>
         </div>
+        </a>
     </div>  
 </template>
 

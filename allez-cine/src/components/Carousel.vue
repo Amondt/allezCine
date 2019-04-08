@@ -3,47 +3,54 @@
     <transition-group
       class='carousel'
       tag="div">
+
       <div
-        v-for="slide in slides" 
+        v-for="(slide, index) in slides" 
         class='slide'
-        :key="slide.id">
-        <h4> {{ slide.title }} </h4>
+        :key="index">
+        <img :src="slide.imageSrc" alt="poster image">
       </div>
     </transition-group>
-    <div class='carousel-controls'>
-      <button class='button1' @click="previous">≺</button>
-      <button class='button1' @click="next">≻</button>
-    </div>
   </div>
 </template>
 
 
 <script>
+
+import { getDataTmdbMov } from '../../apis/tmdbApi/tmdbApiMethods.js'
+
 export default {
   data () {
     return {
       slides: [
         {
           title: 'LASTEST ONLINE MOVIES ',
-          id: 1
+          imageSrc: null,
+          id: 1,
         },
         {
           title: 'LASTEST ONLINE MOVIES ',
+          imageSrc: null,
           id: 2
         },
         {
           title: 'LASTEST ONLINE MOVIES ',
+          imageSrc: null,
           id: 3
         },
         {
           title: 'LASTEST ONLINE MOVIES ',
+          imageSrc: null,
           id: 4
         },
         {
           title: 'LASTEST ONLINE MOVIES ',
+          imageSrc: null,
           id: 5
         }
-      ]
+      ],
+      films: null,
+      swipe: null
     }
   },
   methods: {
@@ -55,6 +62,18 @@ export default {
       const last = this.slides.pop()
       this.slides = [last].concat(this.slides)
     }
+  },
+  created () {
+    this.films = getDataTmdbMov('movie', 'popularity.desc', 'en')
+  },
+  mounted () {
+    for (let i = 0; i <= 5; i++) {
+      this.slides[i].imageSrc = (this.films[i].poster_path ? `https://image.tmdb.org/t/p/w500/${this.films[i].poster_path}` : '/assets/img/salut.png')
+    }
+  },
+  beforeMount () {
+    const self = this 
+    setInterval(function() { self.next() }, 10000)
   }
 }
 </script>
@@ -67,11 +86,11 @@ export default {
 
 div.carousel {
     width: 100%;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 div.slide {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .carousel-view {
@@ -89,12 +108,11 @@ div.slide {
 }
 
 .slide[data-v-e3565ce0] {
-    background-color: aquamarine;
     -webkit-box-flex: 0;
     -ms-flex: 2 0 26em;
     flex: 2 0 26em;
     height: 400px;
-    margin: 1em;
+    margin: 0em 5em;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -104,7 +122,6 @@ div.slide {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    border: 0.1em dashed #000;
     border-radius: 0%;
     -webkit-transition: -webkit-transform 1.3s ease-in-out;
     transition: -webkit-transform 1.3s ease-in-out;
@@ -112,8 +129,9 @@ div.slide {
     transition: transform 1.3s ease-in-out, -webkit-transform 1.3s ease-in-out;
 }
 
-
-
+img {
+  height: 100%!important;
+}
 .slide:first-of-type {
   opacity: 0;
 }
@@ -121,7 +139,7 @@ div.slide {
   opacity: 0;
 }
 div.slide{
-    width:400px!important;
+    /* width:400px!important; */
 }
 
 button  {
@@ -136,19 +154,18 @@ button  {
     display: inline-block;
     font-size: 1.5em;
     font-weight: 900;
-    
 }
 
 button:hover {
-color: #ffffff !important;
-background: #b9b9b8;
-border-color: #575655 !important;
-transition: all 0.4s ease 0s;
+  color: #ffffff !important;
+  background: #b9b9b8;
+  border-color: #575655 !important;
+  transition: all 0.4s ease 0s;
 }
 @media all and (max-width:30em){
- a.button{
+  a.button{
     display: block;
     margin: 0.4em auto;
-}
+  }
 }
 </style>

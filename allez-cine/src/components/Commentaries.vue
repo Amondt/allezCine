@@ -12,19 +12,19 @@
         
 
         <form id="addCom" @submit="addComment">
-             <md-field>
-      <label style="margin-left:20px">Titre</label>
-      <md-input v-model="initial"></md-input>
-    </md-field>
+                <md-field>
+                    <label style="margin-left:20px" for="title">Titre</label>
+                    <md-input v-model="initial" name="title"></md-input>
+                </md-field>
 
             <md-card>
                 <md-field >
-                    <label>Commentaire</label>
-                    <md-textarea v-model="textarea"></md-textarea>
+                    <label for="comment">Commentaire</label>
+                    <md-textarea v-model="textarea" name="comment"></md-textarea>
                 </md-field>
             </md-card>
 
-            <md-button class="md-raised md-primary">Ajouter le commentaire</md-button>
+            <md-button class="md-raised md-primary" type="submit">Ajouter le commentaire</md-button>
         </form>
 
         <div v-if="comments" class="container" md-with-hover>
