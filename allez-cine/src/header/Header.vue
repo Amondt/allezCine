@@ -1,7 +1,6 @@
 <template>
     <div id="header"> 
         <div class="navbar">
-
             <nav>
                 <router-link to='/home' id="home" :class="['home']">Home</router-link>
                 <router-link to='/films' id="films" :class="['films']">Films Populaires</router-link>
@@ -180,7 +179,6 @@ button:hover {
     width: 500px;
 }
 
-<<<<<<< HEAD
 @media only screen and (max-width: 768px) {
   .navbar, nav, .search {
     flex-direction: column;
@@ -191,11 +189,4 @@ button:hover {
     margin: 0;
   }
 }
- 
-=======
-
-
-
-
->>>>>>> 841afeeb6479858d969a20f217a2763ffb68e00f
 </style>
