@@ -148,7 +148,7 @@ export default {
     @media screen and (max-width: 640px) {
   
          #lowerbar-wrapper {
-    background:rgb(0, 0, 0);
+    background-color:transparent;
     float: left;
     margin: 0px 5px auto;
     padding-bottom: 20px;
