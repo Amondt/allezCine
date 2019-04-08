@@ -1,20 +1,15 @@
 <template>
-    <div id="header">
-         
-        <div id="navbar">
-           
+    <div id="header"> 
+        <div class="navbar">
             <nav>
-               
                 <router-link to='/home' id="home" :class="['home']">Home</router-link>
                 <router-link to='/films' id="films" :class="['films']">Films Populaires</router-link>
                 <router-link to='/series' id="series" :class="['series']">Séries TV</router-link>
             </nav>
             <div class="search">
                 <input type="search" id="site-search" name="q"
-                aria-label="Search through site content" placeholder="Search">
-                <button>Search</button>
+                aria-label="Search through site content" placeholder="Recherche">
             </div>
-            
         </div>
         <Carousel />
     </div>
@@ -38,9 +33,14 @@ img {
 
 #header {
     background-color: rgb(0, 0, 0);
-    height: 540px;
     color: #ffffff;
 }
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+}
+
 a, a:visited {
 	outline:none;
 	color:red;
@@ -63,17 +63,15 @@ section, footer, header, aside, nav{
 --------------------------*/
 
 nav {
-    margin: 28px auto 0px;
+    padding: 25px;
     background-color: #000000;
-    border-radius: 2px;
     float: left;
 }
 
 
 nav a{
-    margin-left: 20px;
-	display:inline-block;
-	padding: 15px 6px;
+    margin-left: 10px;
+	padding: 0px 10px;
 	color:#fff !important;
 	font-weight:bold;
 	font-size:16px;
@@ -96,14 +94,6 @@ nav a:hover{
 
 }
 
-nav a:first-child{
-	border-radius:2px 0 0 2px;
-}
-
-nav a:last-child{
-	border-radius:0 2px 2px 0;
-}
-
 nav.home .home,
 nav.films .films,
 nav.series .series,
@@ -122,12 +112,11 @@ p b{
 	display:inline-block;
 	padding:5px 10px;
 	background-color:#c4d7e0;
-	border-radius:2px;
 	text-transform:uppercase;
 	font-size:18px;
 }
 .resource {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
 .router-link-exact-active {
@@ -142,8 +131,6 @@ label {
 
 input,
 label {
-    /* float: right; */
-    margin: 1.9rem 19px;
     font-size: 1.2em;
     
 }
@@ -153,7 +140,6 @@ label {
 }
 
 button {
-    
     background: #ED213A;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to bottom, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to bottom, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -176,17 +162,17 @@ button:hover {
 
 
 .search {
-    
     float: right;
-    margin-right: 30px;
-    align-items: baseline;
+    padding: 20px;
 }
 
 #site-search {
-    border-radius: 3px;
-    padding: 10px;
+    border-radius: 66px;
+    padding: 2px;
+    -webkit-transition: .2s;
     transition: .2s;
     width: 250px;
+    padding-left: 20px;
 }
 
 #site-search:focus {
