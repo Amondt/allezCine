@@ -85,7 +85,6 @@ div.slide {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  width: 24em;
   min-height: 25em;
 }
 

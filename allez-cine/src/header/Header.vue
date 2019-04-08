@@ -1,6 +1,6 @@
 <template>
-    <div id="header">
-        <div id="navbar">
+    <div id="header"> 
+        <div class="navbar">
             <nav>
                 <router-link to='/home' id="home" :class="['home']">Home</router-link>
                 <router-link to='/films' id="films" :class="['films']">Films Populaires</router-link>
@@ -10,7 +10,6 @@
                 <input type="search" id="site-search" name="q"
                 aria-label="Search through site content" placeholder="Recherche">
             </div>
-            
         </div>
         <Carousel />
     </div>
@@ -34,9 +33,14 @@ img {
 
 #header {
     background-color: rgb(0, 0, 0);
-    height: 540px;
     color: #ffffff;
 }
+
+.navbar{
+    display:flex;
+    justify-content: space-between;
+}
+
 a, a:visited {
 	outline:none;
 	color:red;
@@ -59,7 +63,7 @@ section, footer, header, aside, nav{
 --------------------------*/
 
 nav {
-    margin: 28px auto 0px;
+    padding: 20px;
     background-color: #000000;
     border-radius: 2px;
     float: left;
@@ -67,7 +71,7 @@ nav {
 
 
 nav a{
-    margin-left: 20px;
+    margin-left: 10px;
 	display:inline-block;
 	padding: 15px 6px;
 	color:#fff !important;
@@ -138,8 +142,6 @@ label {
 
 input,
 label {
-    /* float: right; */
-    margin: 1.9rem 19px;
     font-size: 1.2em;
     
 }
@@ -172,8 +174,7 @@ button:hover {
 
 .search {
     float: right;
-    margin-right: 30px;
-    align-items: baseline;
+    padding: 20px;
 }
 
 #site-search {
