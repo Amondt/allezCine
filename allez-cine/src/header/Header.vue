@@ -179,7 +179,7 @@ button:hover {
 }
 
 #site-search:focus {
-    width: 500px;
+    width: 300px!important;
 }
 
 @media only screen and (max-width: 768px) {
