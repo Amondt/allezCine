@@ -63,17 +63,15 @@ section, footer, header, aside, nav{
 --------------------------*/
 
 nav {
-    padding: 20px;
+    padding: 25px;
     background-color: #000000;
-    border-radius: 2px;
     float: left;
 }
 
 
 nav a{
     margin-left: 10px;
-	display:inline-block;
-	padding: 15px 6px;
+	padding: 0px 10px;
 	color:#fff !important;
 	font-weight:bold;
 	font-size:16px;
@@ -96,14 +94,6 @@ nav a:hover{
 
 }
 
-nav a:first-child{
-	border-radius:2px 0 0 2px;
-}
-
-nav a:last-child{
-	border-radius:0 2px 2px 0;
-}
-
 nav.home .home,
 nav.films .films,
 nav.series .series,
@@ -122,7 +112,6 @@ p b{
 	display:inline-block;
 	padding:5px 10px;
 	background-color:#c4d7e0;
-	border-radius:2px;
 	text-transform:uppercase;
 	font-size:18px;
 }
@@ -178,7 +167,6 @@ button:hover {
 }
 
 #site-search {
-    margin-top:36px;
     border-radius: 66px;
     padding: 2px;
     -webkit-transition: .2s;
