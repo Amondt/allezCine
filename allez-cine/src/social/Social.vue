@@ -39,7 +39,7 @@ export default {
         height: 45px;
         width: 200px;
         position: fixed;
-        top: 600px;
+        top: 400px;
         left: -150px;
         background-color: #3b5998;
         transition: 0.3s;
@@ -52,7 +52,7 @@ export default {
         height: 45px;
         width: 200px;
         position: fixed;
-        top: 600px;
+        top: 400px;
         left: -100px;
         background-color: #3b5998;
     }
@@ -63,7 +63,7 @@ export default {
         height: 45px;
         width: 200px;
         position: fixed;
-        top:650px;
+        top:450px;
         left: -150px;
         background-color: #00aced;
         transition: 0.3s ;
@@ -76,7 +76,7 @@ export default {
         height: 45px;
         width: 200px;
         position: fixed;
-        top:650px;
+        top:450px;
         left: -100px;
         background-color: #00aced;
     }

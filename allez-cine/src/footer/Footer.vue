@@ -90,7 +90,6 @@ export default {
     float: left;
     margin: 0px 5px auto;
     padding-bottom: 20px;
-    /* width: 300px; */
     text-align: justify;
     color:rgb(255, 255, 255);
     font: normal 16px Arial, Tahoma, Verdana;
@@ -145,5 +144,50 @@ export default {
         color: red;
         line-height: 2.5em;
     }
+
+    @media screen and (max-width: 640px) {
+  
+         #lowerbar-wrapper {
+    background:rgb(0, 0, 0);
+    float: left;
+    margin: 0px 5px auto;
+    padding-bottom: 20px;
+    text-align: left;
+    color:rgb(255, 255, 255);
+    font: normal 16px Arial, Tahoma, Verdana;
+    line-height: 1.6em;
+    word-wrap: break-word;
+    overflow: hidden;
+    font-size: 0.5em;
+    margin-left: 10px;
+    }
+
+   .lowerbar h2[data-v-602ad626] {
+    margin: 0px 0px 10px 0px;
+    padding: 3px 0px 3px 0px;
+    text-align: justify;
+    border: 0;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font: bold 8px Arial, Tahoma, Verdana;
+}
+
+    h1 {
+        font-size: 1em;
+        margin-bottom: 19px;
+
+    }
+ 
+    span {
+        font-size:1em;
+    }
+
+
+  }
+
+
+
+
+
 
 </style>
