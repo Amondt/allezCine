@@ -1,16 +1,19 @@
 <template>
   <div class='carousel-view'>
-    <transition-group
-      class='carousel'
-      tag="div">
-
-      <div
-        v-for="(slide, index) in slides" 
-        class='slide'
-        :key="index">
-        <img :src="slide.imageSrc" alt="poster image">
-      </div>
-    </transition-group>
+    <div v-if="films">
+      <transition-group
+        class='carousel'
+        tag="div">
+        <div
+          v-for="(slide, index) in slides" 
+          class='slide'
+          :key="index"
+          @click="displayDetails">
+            <img :src="slide.imageSrc" alt="poster image">
+        </div>
+      </transition-group>
+    </div>
+    <div v-else></div>
   </div>
 </template>
 
@@ -26,27 +29,27 @@ export default {
         {
           title: 'LASTEST ONLINE MOVIES ',
           imageSrc: null,
-          id: 1,
+          id: null
         },
         {
           title: 'LASTEST ONLINE MOVIES ',
           imageSrc: null,
-          id: 2
+          id: null
         },
         {
           title: 'LASTEST ONLINE MOVIES ',
           imageSrc: null,
-          id: 3
+          id: null
         },
         {
           title: 'LASTEST ONLINE MOVIES ',
           imageSrc: null,
-          id: 4
+          id: null
         },
         {
           title: 'LASTEST ONLINE MOVIES ',
           imageSrc: null,
-          id: 5
+          id: null
         }
       ],
       films: null,
@@ -61,14 +64,18 @@ export default {
     previous () {
       const last = this.slides.pop()
       this.slides = [last].concat(this.slides)
+    },
+    displayDetails () {
+      this.$router.push(`/details/movie/${this.slide.id}`)
     }
   },
   created () {
     this.films = getDataTmdbMov('movie', 'popularity.desc', 'en')
   },
   mounted () {
-    for (let i = 0; i <= 5; i++) {
+    for (let i = 0; i < 5; i++) {
       this.slides[i].imageSrc = (this.films[i].poster_path ? `https://image.tmdb.org/t/p/w500/${this.films[i].poster_path}` : '/assets/img/salut.png')
+      this.slides[i].id = this.films[i].id
     }
   },
   beforeMount () {
