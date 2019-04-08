@@ -69,7 +69,24 @@ export default {
 }
 </script>
 
+
 <style scoped>
+.md-field .md-input, .md-field .md-textarea {
+    height: 32px;
+    padding: 0;
+    display: block;
+    flex: 1;
+    border: none;
+    background: none;
+    transition: .4s cubic-bezier(.25,.8,.25,1);
+    transition-property: font-size,padding-top,color;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 32px;
+    padding-left: 15px;
+}
+
+
 h2 {
     text-align: left;
 }
