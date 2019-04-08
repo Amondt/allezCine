@@ -7,8 +7,9 @@
         <div
           v-for="(slide, index) in slides" 
           class='slide'
-          :key="index">
-            <img :src="slide.imageSrc" alt="poster image" @click="displayDetails(slide.id)">
+          :key="index"
+          @click="displayDetails(slide.id)">
+            <img :src="slide.imageSrc" alt="poster image">
         </div>
       </transition-group>
     </div>
@@ -51,8 +52,7 @@ export default {
           id: null
         }
       ],
-      films: null,
-      swipe: null
+      films: null
     }
   },
   methods: {
@@ -100,6 +100,7 @@ div.carousel {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 1.5em;
 }
 .carousel {
   display: flex;
@@ -133,6 +134,12 @@ div.carousel {
 
 img {
   height: 100%!important;
+  transition: .1s;
+}
+img:hover {
+  border: 1px solid #5c5c5c;
+  filter: grayscale(40%);
+  cursor: pointer;
 }
 .slide:first-of-type {
   opacity: 0;
