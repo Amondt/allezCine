@@ -1,7 +1,6 @@
 <template>
     <div id="header"> 
         <div class="navbar">
-
             <nav>
                 <router-link to='/home' id="home" :class="['home']">Home</router-link>
                 <router-link to='/films' id="films" :class="['films']">Films Populaires</router-link>
@@ -20,7 +19,7 @@
 import Carousel from '../components/Carousel.vue'
 
 export default {
-    name: 'header',
+    name: 'menuTop',
     components: {Carousel}
 }
 </script>
@@ -169,6 +168,7 @@ button:hover {
 
 #site-search {
     border-radius: 66px;
+    border: none;
     padding: 2px;
     -webkit-transition: .2s;
     transition: .2s;
@@ -177,25 +177,17 @@ button:hover {
 }
 
 #site-search:focus {
-    width: 500px;
+    width: 450px;
+    outline-width: 0;
 }
 
-<<<<<<< HEAD
 @media only screen and (max-width: 768px) {
   .navbar, nav, .search {
     flex-direction: column;
-    display: inline-flex;
-    text-align: left;
   }
   nav, .search {
     margin: 0;
   }
 }
- 
-=======
 
-
-
-
->>>>>>> 841afeeb6479858d969a20f217a2763ffb68e00f
 </style>

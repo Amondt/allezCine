@@ -1,21 +1,21 @@
 <template>
   <div id="app">
-    <Header/>
-    <router-view/>
+    <Menu/>
+    <router-view :key="$route.fullPath"/>
     <Footer/>
     <Social/>
   </div>
 </template>
 
 <script>
-import Header from './header/Header.vue'
+import Menu from './header/Menu.vue'
 import Footer from './footer/Footer.vue'
 import Social from './social/Social.vue'
 
 export default {
   name: 'app',
   components: {
-    Header,
+    Menu,
     Footer,
     Social
   }
