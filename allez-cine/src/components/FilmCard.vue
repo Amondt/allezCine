@@ -14,7 +14,7 @@ export default {
     name: 'card',
     data () {
         return {
-            imageSrc: (this.film.poster_path ? `https://image.tmdb.org/t/p/w500/${this.film.poster_path}` : '/assets/salut.png'),
+            imageSrc: (this.film.poster_path ? `https://image.tmdb.org/t/p/w500/${this.film.poster_path}` : '/assets/img/salut.png'),
             type: (this.film.title ? 'movie' : 'tv')
         }
     },
