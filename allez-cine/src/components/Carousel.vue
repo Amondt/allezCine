@@ -7,9 +7,8 @@
         <div
           v-for="(slide, index) in slides" 
           class='slide'
-          :key="index"
-          @click="displayDetails">
-            <img :src="slide.imageSrc" alt="poster image">
+          :key="index">
+            <img :src="slide.imageSrc" alt="poster image" @click="displayDetails(slide.id)">
         </div>
       </transition-group>
     </div>
@@ -65,8 +64,8 @@ export default {
       const last = this.slides.pop()
       this.slides = [last].concat(this.slides)
     },
-    displayDetails () {
-      this.$router.push(`/details/movie/${this.slide.id}`)
+    displayDetails (id) {
+      this.$router.push(`/details/movie/${id}`)
     }
   },
   created () {
@@ -94,10 +93,6 @@ export default {
 div.carousel {
     width: 100%;
     /* background-color: blue; */
-}
-
-div.slide {
-    /* width: 100%; */
 }
 
 .carousel-view {
@@ -144,9 +139,6 @@ img {
 }
 .slide:last-of-type {
   opacity: 0;
-}
-div.slide{
-    /* width:400px!important; */
 }
 
 button  {

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header/>
+    <Menu/>
     <router-view/>
     <Footer/>
     <Social/>
@@ -8,14 +8,14 @@
 </template>
 
 <script>
-import Header from './header/Header.vue'
+import Menu from './header/Menu.vue'
 import Footer from './footer/Footer.vue'
 import Social from './social/Social.vue'
 
 export default {
   name: 'app',
   components: {
-    Header,
+    Menu,
     Footer,
     Social
   }

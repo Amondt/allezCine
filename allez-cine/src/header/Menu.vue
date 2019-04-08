@@ -19,7 +19,7 @@
 import Carousel from '../components/Carousel.vue'
 
 export default {
-    name: 'header',
+    name: 'menuTop',
     components: {Carousel}
 }
 </script>
@@ -176,7 +176,8 @@ button:hover {
 }
 
 #site-search:focus {
-    width: 500px;
+    width: 450px;
+    outline-width: 0;
 }
 
 @media only screen and (max-width: 768px) {
