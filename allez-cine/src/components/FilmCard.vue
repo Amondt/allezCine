@@ -47,4 +47,30 @@ img {
     width: 100%;
     border-radius: 3px 3px 0 0;
 }
+
+@media only screen and (max-width: 600px) {
+    #card {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 440px;
+    margin: 10px;
+    border-radius: 3px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 0px 0px 0px rgba(0,0,0,.2), 0 0px 1px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12)
+}
+.container[data-v-fae5bece] {
+    margin: 20px 25px!important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+}
+
+
 </style>
