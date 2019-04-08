@@ -182,10 +182,12 @@ button:hover {
 @media only screen and (max-width: 768px) {
   .navbar, nav, .search {
     flex-direction: column;
+    display: inline-flex;
+    text-align: left;
   }
   nav, .search {
     margin: 0;
   }
 }
-
+ 
 </style>
