@@ -69,8 +69,11 @@ export default {
 }
 </script>
 
-
 <style scoped>
+img {
+    float: left;
+}
+
 .md-field .md-input, .md-field .md-textarea {
     height: 32px;
     padding: 0;
@@ -86,7 +89,6 @@ export default {
     padding-left: 15px;
 }
 
-
 h2 {
     text-align: left;
 }
@@ -99,8 +101,7 @@ h2 {
 }
 
 #comments {
-    width: 800px;
-    max-width: 900px;
+    width: 100%;
     margin: auto;
 }
 

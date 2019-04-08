@@ -23,6 +23,8 @@ export default {
 </script>
 
 <style>
+
+
 @import url('//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons');
 
 
@@ -30,7 +32,7 @@ export default {
   -webkit-box-sizing:border-box;
   -moz-box-sizing:border-box;
   box-sizing:border-box;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 #app {
@@ -38,6 +40,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background: #F9F9F9;
   margin-top: 0px;
 }
 
