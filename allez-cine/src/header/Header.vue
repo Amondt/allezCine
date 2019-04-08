@@ -180,8 +180,22 @@ button:hover {
     width: 500px;
 }
 
+<<<<<<< HEAD
+@media only screen and (max-width: 768px) {
+  .navbar, nav, .search {
+    flex-direction: column;
+    display: inline-flex;
+    text-align: left;
+  }
+  nav, .search {
+    margin: 0;
+  }
+}
+ 
+=======
 
 
 
 
+>>>>>>> 841afeeb6479858d969a20f217a2763ffb68e00f
 </style>
