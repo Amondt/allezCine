@@ -22,11 +22,19 @@
                         </div>
                     </div>
                     <div v-else>
-                        <img :src="imageSrc" alt="poster film">
-                        <h1>{{ result.name }} ({{ result.first_air_date.split('-')[0] }})</h1><span>{{ result.vote_average }}</span>
-                        <h3>Synopsis</h3>
-                        <p>{{ result.overview }}</p>
-                        <span v-for="(genre, index) in result.genres" :key="index" class="genre">{{ genre.name }}</span>
+                        <div class="flex">
+                            <img :src="imageSrc" alt="poster film">
+                            <div class="infos">
+                                <div id="stars" v-for="i in 5" :key="i">
+                                    <font-awesome-icon v-if="5 - Math.round(result.vote_average / 2) < i" icon="star" />
+                                    <font-awesome-icon v-else style="color: #9e9e9e;" icon="star" />
+                                </div>
+                                <h1>{{ result.name }} ({{ result.first_air_date.split('-')[0] }})</h1>
+                                <h3>Synopsis</h3>
+                                <p>{{ result.overview }}</p>
+                                <span v-for="(genre, index) in result.genres" :key="index" class="genre">{{ genre.name }}</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <Commentaries :key="commentKey" :forceRerender="forceRerender"/>
