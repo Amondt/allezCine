@@ -75,10 +75,10 @@ export default {
     margin:auto;
     padding: 10px;
     width: 100%;
-    background:#000000;
+    background:#262626;
     }
     #lower-wrapper {
-    background:#000000;
+    background:#262626;
     margin:auto;
     padding: 20px 0px 20px 0px ;
     width: 80vw;
@@ -86,7 +86,7 @@ export default {
     }
 
     #lowerbar-wrapper {
-    background:rgb(0, 0, 0);
+    background:#262626;
     float: left;
     margin: 0px 5px auto;
     padding-bottom: 20px;

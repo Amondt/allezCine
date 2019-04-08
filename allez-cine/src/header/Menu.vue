@@ -32,7 +32,7 @@ img {
 }
 
 #header {
-    background-color: rgb(0, 0, 0);
+    background-color: #262626;
     color: #ffffff;
 }
 
@@ -64,7 +64,7 @@ section, footer, header, aside, nav{
 
 nav {
     padding: 25px;
-    background-color: #000000;
+    background-color: #262626;
     float: left;
 }
 
