@@ -34,7 +34,7 @@ export default {
 <style scoped>
 #card {
     transition: 0.1s;
-    /* flex: 1 1 auto; */
+    flex: 1 1 auto;
     width: 140px;
     height: 316px;
     margin: 10px;
