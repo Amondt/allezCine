@@ -1,47 +1,38 @@
 <template>
-  <div id="app">
-    <Menu/>
-    <router-view :key="$route.fullPath"/>
-    <Footer/>
-    <Social/>
-  </div>
+  <v-app>
+    <v-toolbar app>
+      <v-toolbar-title class="headline text-uppercase">
+        <span>Vuetify</span>
+        <span class="font-weight-light">MATERIAL DESIGN</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-btn
+        flat
+        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        target="_blank"
+      >
+        <span class="mr-2">Latest Release</span>
+      </v-btn>
+    </v-toolbar>
+
+    <v-content>
+      <HelloWorld/>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
-import Menu from './header/Menu.vue'
-import Footer from './footer/Footer.vue'
-import Social from './social/Social.vue'
+import HelloWorld from './components/HelloWorld'
 
 export default {
-  name: 'app',
+  name: 'App',
   components: {
-    Menu,
-    Footer,
-    Social
+    HelloWorld
+  },
+  data () {
+    return {
+      //
+    }
   }
 }
 </script>
-
-<style>
-
-
-@import url('//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons');
-
-
-* {
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
-  /* overflow-x: hidden; */
-}
-
-#app {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  background: #F9F9F9;
-  margin-top: 0px;
-}
-
-</style>
