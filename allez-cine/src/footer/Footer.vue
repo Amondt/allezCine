@@ -1,6 +1,4 @@
 <template>
-   
-
     <div id='lower'>
         <div id='lower-wrapper'>
            
@@ -42,9 +40,6 @@
             <div style='clear: both;'/>
         </div>
     </div>
-        
-        
-    
 </template>
 
 <script>
