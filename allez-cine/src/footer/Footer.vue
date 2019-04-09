@@ -3,6 +3,7 @@
         <div id='lower-wrapper'>
            
             <h1><span>ALLEZ</span>CINE!</h1>
+            <br>
             
             <div id="footerMenus">
 
@@ -15,7 +16,7 @@
                 </b>
                 </div>
 
-
+                <br>
                 <div id='lowerbar-wrapper'>
                 <b class='lowerbar' id='lowerbar2' preferred='yes'>
                 <div><h2>COMMUNAUTE</h2></div>
@@ -27,7 +28,7 @@
                 </b>
                 </div>
 
-
+                <br>
                 <div id='lowerbar-wrapper'>
                 <b class='lowerbar' id='lowerbar3' preferred='yes'>
                 <div><h2>LEGAL</h2></div>
@@ -150,7 +151,7 @@ a:hover {
     line-height: 2.5em;
 }
 
-@media screen and (max-width: 640px) {
+@media only screen and (max-width: 640px) {
     #footerMenus {
         display: flex;
         flex-direction: column;
@@ -158,12 +159,15 @@ a:hover {
         justify-content: space-between;
     }
 
+    .lowerbar {
+        text-align: center;
+    }
+
     #lowerbar-wrapper {
         background-color:transparent;
-        float: left;
         display: block;
         flex-direction: column;
-        margin: auto;
+        margin: 0 auto!important;
         padding-bottom: 20px;
         text-align: left;
         color:rgb(255, 255, 255);
@@ -188,7 +192,7 @@ a:hover {
     #lower-wrapper {
         background:#262626;
         margin:auto;
-        padding: 20px 0px 20px 78px;
+        padding: 20px 0;
         width: 80vw;
         border:0;
     }
@@ -200,6 +204,10 @@ a:hover {
 
     span {
         font-size:1em;
+    }
+
+    h2 {
+        text-align: center!important;
     }
 }
 </style>
