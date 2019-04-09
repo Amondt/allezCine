@@ -17,7 +17,8 @@
 
                 <md-button class="md-raised md-primary" type="submit">Ajouter le commentaire</md-button>
             </form>
-
+        </md-card>
+        <md-card class="md-elevation-10">
             <div v-if="comments" class="container" md-with-hover>
                 <div v-for="(comment, index) in comments" :key="index" class="comment">
                     <span class="delete" @click="delComment(comment.id)">X</span>
@@ -96,7 +97,8 @@ h2 {
 .md-primary {
     background-color: red;
     color: #ffffff;
-    border-radius: 6px;
+    border-radius: 3px;
+    margin-bottom: 30px;
     
 }
 

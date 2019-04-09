@@ -1,5 +1,8 @@
 <template>
     <div id="header"> 
+        <a href="" class="logo">CSS Nav</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
         <div class="navbar">
             <nav>
                 <router-link to='/home' id="home" :class="['home']">Home</router-link>
