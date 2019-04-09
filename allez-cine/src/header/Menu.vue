@@ -5,13 +5,15 @@
         </v-navigation-drawer>
 
         <v-toolbar app fixed clipped-left flat absolute dark>
-            <v-toolbar-side-icon @click.stop="drawer = !drawer" hidden-md-and-up></v-toolbar-side-icon>
-            <!-- <v-toolbar-title hidden-md-and-up>Brewdog</v-toolbar-title> -->
-            <nav hidden-sm-and-down>
+            <div v-if="window.width < 960">
+                <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
+            </div>
+            <div v-else>
                 <router-link to='/home' id="home" :class="['home']">Home</router-link>
                 <router-link to='/films' id="films" :class="['films']">Films Populaires</router-link>
                 <router-link to='/series' id="series" :class="['series']">Séries TV</router-link>
-            </nav>
+            </div>
+            
             <v-spacer></v-spacer>
             <input type="search" name="q" aria-label="Search through site content" placeholder="Recherche">
         </v-toolbar>
@@ -28,11 +30,28 @@ export default {
     name: 'menuTop',
     data(){
         return {
-            drawer: true
+            drawer: true,
+            window: {
+                width: 0,
+                height: 0
+            }
         }
     },
     components: {
         Carousel
+    },
+    created() {
+        window.addEventListener('resize', this.handleResize)
+        this.handleResize();
+    },
+    destroyed() {
+        window.removeEventListener('resize', this.handleResize)
+    },
+    methods: {
+        handleResize() {
+        this.window.width = window.innerWidth;
+        this.window.height = window.innerHeight;
+        }
     }
 }
 </script>
