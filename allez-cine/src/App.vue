@@ -33,6 +33,9 @@ export default {
   -moz-box-sizing:border-box;
   box-sizing:border-box;
 }
+*:hover {
+  text-decoration: none!important;
+}
 
 #app {
   -webkit-font-smoothing: antialiased;
