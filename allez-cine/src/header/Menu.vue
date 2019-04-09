@@ -51,7 +51,10 @@
                 <input type="search" style="padding: 3px;" name="q" aria-label="Search through site content" placeholder="Recherche">
             </v-card>
         </v-toolbar>
-        <v-layout mt-5 pt-4>
+        <v-layout mt-4 pt-4 mb-3 pl-4>
+            <h1><span class="titleP1">ALLEZ</span>CINE!</h1>
+        </v-layout>
+        <v-layout>
             <Carousel />
         </v-layout>
     </div>
@@ -94,10 +97,12 @@ export default {
 
 .titleP1 {
     color: #ED473E;
+    background: none;
 }
 
 h1 {
     color: #fff;
+    background: none;
 }
 
 #header {
