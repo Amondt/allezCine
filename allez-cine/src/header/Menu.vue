@@ -43,7 +43,7 @@
             
             <v-spacer></v-spacer>
             <v-card light class="px-3 py-1" ripple width="300" style="borderRadius:20px;" id="searchBar">
-                <input type="search" name="q" aria-label="Search through site content" placeholder="Recherche">
+                <input type="search" style="padding: 3px;" name="q" aria-label="Search through site content" placeholder="Recherche">
             </v-card>
         </v-toolbar>
         <v-layout mt-5 pt-4>
@@ -59,7 +59,7 @@ export default {
     name: 'menuTop',
     data(){
         return {
-            drawer: true,
+            drawer: false,
             window: {
                 width: 0,
                 height: 0
