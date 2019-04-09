@@ -30,21 +30,14 @@ name: 'films',
 }
 </script>
 
-<style>
+<style scoped>
 .title {
-    margin: 60px 150px 40px 150px;
     text-align: left;
     border-left: 5px solid red;
     padding-left: 10px;
 }
 
-.center {
-    display: block;
-    margin: auto;
-}
-
 .container {
-    margin: 20px 200px;
     display: flex;
     flex-flow: row wrap;
 }
