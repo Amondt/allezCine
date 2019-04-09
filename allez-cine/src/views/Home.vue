@@ -44,7 +44,6 @@ export default {
 <style scoped>
 
 .title {
-    margin: 60px 150px 40px 150px;
     text-align: left;
     border-left: 5px solid red;
     padding-left: 10px;
@@ -56,7 +55,6 @@ export default {
 }
 
 .container {
-    margin: 20px 200px;
     display: flex;
     flex-flow: row wrap;
 }

@@ -81,11 +81,6 @@ export default {
 
 <style scoped>
 @media only screen and (min-width: 1200px) {
-    .container {
-        display: block;
-        margin: 50px auto;
-        width: 60%;
-    }
     .flex {
         display: flex;
         flex-direction: row;
@@ -93,11 +88,6 @@ export default {
     }
 }
 @media only screen and (max-width: 1200px) {
-    .container {
-        display: block;
-        margin: 50px auto;
-        width: 80%;
-    }
     .flex {
         display: flex;
         flex-direction: row;
@@ -105,11 +95,6 @@ export default {
     }
 }
 @media only screen and (max-width: 992px) {
-    .container {
-        display: block;
-        margin: 50px auto;
-        width: 80%;
-    }
     .flex {
         display: flex;
         flex-direction: row;
@@ -117,11 +102,6 @@ export default {
     }
 }
 @media only screen and (max-width: 768px) {
-    .container {
-        display: block;
-        margin: 50px auto;
-        width: 95%;
-    }
     .flex {
         display: flex;
         flex-direction: column;
