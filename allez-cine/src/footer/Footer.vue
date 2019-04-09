@@ -7,33 +7,34 @@
             <h1><span>ALLEZ</span>CINE!</h1>
             
             <div id="footerMenus">
+
                 <div id='lowerbar-wrapper'>
                 <b class='lowerbar' id='lowerbar1' preferred='yes'>
-                <h2>LES FONDAMENTAUX</h2><br>
-                <a href="#" class="home" >A propos de AllezCine</a><br>
-                <a href="#" class="home" >Contactez-nous</a><br>
-                <a href="#" class="home" >Forum d'aide</a><br>
+                <div><h2>LES FONDAMENTAUX</h2></div>
+                <div><a href="#" class="home" >A propos de AllezCine</a></div>
+                <div><a href="#" class="home" >Contactez-nous</a></div>
+                <div><a href="#" class="home" >Forum d'aide</a></div>
                 </b>
                 </div>
 
 
                 <div id='lowerbar-wrapper'>
                 <b class='lowerbar' id='lowerbar2' preferred='yes'>
-                <h2>COMMUNAUTE</h2><br>
-                <a href="#" class="home" >Règles</a><br>
-                <a href="#" class="home" >Classement</a><br>
-                <a href="#" class="home" >Forum</a><br>
-                <a href="#" class="home" >Twitter</a><br>
-                <a href="#" class="home" >Facebook</a><br>
+                <div><h2>COMMUNAUTE</h2></div>
+                <div><a href="#" class="home" >Règles</a></div>
+                <div><a href="#" class="home" >Classement</a></div>
+                <div><a href="#" class="home" >Forum</a></div>
+                <div><a href="#" class="home" >Twitter</a></div>
+                <div><a href="#" class="home" >Facebook</a></div>
                 </b>
                 </div>
 
 
                 <div id='lowerbar-wrapper'>
                 <b class='lowerbar' id='lowerbar3' preferred='yes'>
-                <h2>LEGAL</h2><br>
-                <a href="#" class="home" >Conditions d'utilisation</a><br>
-                <a href="#" class="home" >Politique de confidentialité</a><br>
+                <div><h2>LEGAL</h2></div>
+                <div><a href="#" class="home" >Conditions d'utilisation</a></div>
+                <div><a href="#" class="home" >Politique de confidentialité</a></div>
                 </b>
                 </div>
             </div>
@@ -146,11 +147,20 @@ export default {
     }
 
     @media screen and (max-width: 640px) {
-  
-         #lowerbar-wrapper {
+
+        #footerMenus {
+        display: flex;
+        flex-direction: column;
+        margin: 0px auto;
+        justify-content: space-between;
+    }
+
+    #lowerbar-wrapper {
     background-color:transparent;
     float: left;
-    margin: 0px 5px auto;
+    display: block;
+    flex-direction: column;
+    margin: auto;
     padding-bottom: 20px;
     text-align: left;
     color:rgb(255, 255, 255);
@@ -158,10 +168,10 @@ export default {
     line-height: 1.6em;
     word-wrap: break-word;
     overflow: hidden;
-    font-size: 0.5em;
+    font-size: 1em;
     margin-left: 10px;
     }
-
+   
    .lowerbar h2[data-v-602ad626] {
     margin: 0px 0px 10px 0px;
     padding: 3px 0px 3px 0px;
@@ -169,11 +179,23 @@ export default {
     border: 0;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
-    font: bold 8px Arial, Tahoma, Verdana;
+    font: bold 0.8em Arial, Tahoma, Verdana;
 }
 
+        #lower-wrapper {
+    background:#262626;
+    margin:auto;
+   padding: 20px 0px 20px 78px;
+    width: 80vw;
+    border:0;
+    }
+        
+        
+        
+
+
     h1 {
-        font-size: 1em;
+        font-size: 1.5em;
         margin-bottom: 19px;
 
     }

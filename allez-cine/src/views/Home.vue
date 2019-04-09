@@ -56,7 +56,7 @@ export default {
 }
 
 .container {
-    margin: 20px 200px;
+    margin: 20px 34px;
     display: flex;
     flex-flow: row wrap;
 }

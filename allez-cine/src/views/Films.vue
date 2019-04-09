@@ -30,7 +30,7 @@ name: 'films',
 }
 </script>
 
-<style>
+<style scoped>
 .title {
     margin: 60px 150px 40px 150px;
     text-align: left;
@@ -44,7 +44,7 @@ name: 'films',
 }
 
 .container {
-    margin: 20px 200px;
+    margin: 20px 94px;
     display: flex;
     flex-flow: row wrap;
 }
