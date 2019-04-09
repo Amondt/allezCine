@@ -36,18 +36,9 @@
                 <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
             </div>
             <div v-else>
-                <v-btn flat router to="/home">Home</v-btn>
-                <v-btn flat router to="/films">Films Populaires</v-btn>
-                <v-btn flat router to="/series">Séries TV</v-btn>
-
-                <!-- <v-tabs>
-                    <v-tabs-item active-class router to="/home">Home</v-tabs-item>
-                    <v-tabs-item router to="/films">Films Populaires</v-tabs-item>
-                    <v-tabs-item router to="/tv">Séries TV</v-tabs-item>
-                </v-tabs> -->
-                <!-- <router-link to='/home' id="home" :class="['home']">Home</router-link>
-                <router-link to='/films' id="films" :class="['films']">Films Populaires</router-link>
-                <router-link to='/series' id="series" :class="['series']">Séries TV</router-link> -->
+                <v-btn depressed active-class="active" router to="/home">Home</v-btn>
+                <v-btn depressed active-class="active" router to="/films">Films Populaires</v-btn>
+                <v-btn depressed active-class="active" router to="/series">Séries TV</v-btn>
             </div>
             
             <v-spacer></v-spacer>
@@ -101,6 +92,11 @@ export default {
 
 #searchBar {
     transition: .1s;
+}
+
+.active {
+    background: none;
+    color: #ED473E;
 }
 
 </style>
