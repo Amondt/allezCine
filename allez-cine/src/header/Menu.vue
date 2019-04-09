@@ -29,9 +29,6 @@
                     </v-list-tile-content>
                 </v-list-tile>
             </v-list>
-            <!-- <router-link to='/home' id="home" :class="['home']">Home</router-link>
-            <router-link to='/films' id="films" :class="['films']">Films Populaires</router-link>
-            <router-link to='/series' id="series" :class="['series']">Séries TV</router-link> -->
         </v-navigation-drawer>
 
         <v-toolbar app fixed clipped-left flat absolute dark>
@@ -39,9 +36,18 @@
                 <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
             </div>
             <div v-else>
-                <router-link to='/home' id="home" :class="['home']">Home</router-link>
+                <v-btn flat router to="/home">Home</v-btn>
+                <v-btn flat router to="/films">Films Populaires</v-btn>
+                <v-btn flat router to="/series">Séries TV</v-btn>
+
+                <!-- <v-tabs>
+                    <v-tabs-item active-class router to="/home">Home</v-tabs-item>
+                    <v-tabs-item router to="/films">Films Populaires</v-tabs-item>
+                    <v-tabs-item router to="/tv">Séries TV</v-tabs-item>
+                </v-tabs> -->
+                <!-- <router-link to='/home' id="home" :class="['home']">Home</router-link>
                 <router-link to='/films' id="films" :class="['films']">Films Populaires</router-link>
-                <router-link to='/series' id="series" :class="['series']">Séries TV</router-link>
+                <router-link to='/series' id="series" :class="['series']">Séries TV</router-link> -->
             </div>
             
             <v-spacer></v-spacer>
