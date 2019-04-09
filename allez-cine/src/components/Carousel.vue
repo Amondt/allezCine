@@ -86,6 +86,13 @@ export default {
 
 
 <style scoped>
+
+
+div.data-v-e3565ce0 {
+  width: 100vw;
+}
+
+
 .md-field {
   box-shadow: none;
 }
@@ -108,6 +115,7 @@ div.carousel {
   align-items: center;
   overflow: hidden;
   min-height: 25em;
+  max-width: 100vw;
 }
 
 .slide[data-v-e3565ce0] {
