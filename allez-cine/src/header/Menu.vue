@@ -2,6 +2,11 @@
     <div id="header">
         <v-navigation-drawer v-if="window.width < 960" clipped fixed v-model="drawer" dark app>
             <v-list>
+                <v-list-tile>
+                    <v-list-tile-content>
+                        <h1><span class="titleP1">ALLEZ</span>CINE!</h1>
+                    </v-list-tile-content>
+                </v-list-tile>
                 <v-list-tile router to="/home">
                     <v-list-tile-action>
                         <v-icon>home</v-icon>
@@ -86,6 +91,15 @@ export default {
 </script>
 
 <style scoped>
+
+.titleP1 {
+    color: #ED473E;
+}
+
+h1 {
+    color: #fff;
+}
+
 #header {
     background: #212121;
 }

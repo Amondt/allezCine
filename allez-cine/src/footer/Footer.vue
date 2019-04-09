@@ -51,11 +51,11 @@ export default {
 
 <style scoped>
 span {
-    color: red;
+    color: #ED473E;
 }
 
 h1 {
-    color: #ffffff;
+    color: #fff;
     margin-bottom: 80px;
     text-align: left;
 }
