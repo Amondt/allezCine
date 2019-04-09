@@ -1,25 +1,21 @@
 <template>
     <div id="comments" >
         <h2>Commentaires</h2>
-        <md-card class="md-elevation-10">
+        <div class="allComment">
             <form id="addCom" @submit="addComment">
-                    <md-field>
-                        <label style="margin-left:20px" for="title">Titre</label>
-                        <md-input name="title"></md-input>
-                    </md-field>
-
-                <md-card>
-                    <md-field >
-                        <label for="comment">Commentaire</label>
-                        <md-textarea name="comment"></md-textarea>
-                    </md-field>
-                </md-card>
-
+                <div class='inputTitle'>
+                    <label for="title"></label>
+                    <textarea style="width: 600px; height: 40px;" placeholder='Titre...' name="title"/>
+                </div>
+                <div class="inputComment">
+                    <label for="comment"></label>
+                    <textarea style="width: 600px; height: 100px;" placeholder="Ajouter un commentaire..." class="textComment" name="comment"/>
+                </div>
                 <md-button class="md-raised md-primary" type="submit">Ajouter le commentaire</md-button>
             </form>
-        </md-card>
-        <md-card class="md-elevation-10">
-            <div v-if="comments" class="container" md-with-hover>
+        </div>
+        <div class="subComment">
+            <div v-if="comments" class="subContainer">
                 <div v-for="(comment, index) in comments" :key="index" class="comment">
                     <span class="delete" @click="delComment(comment.id)">X</span>
                     <h3>{{ comment.titleComment }}</h3>
@@ -31,7 +27,7 @@
             <div v-else>
                 Loading...
             </div>
-        </md-card>
+        </div>
     </div>
 </template>
 
@@ -74,6 +70,9 @@ export default {
 img {
     float: left;
 }
+.md-card{
+box-shadow: 0 0px 0px 0px rgba(0,0,0,.2), 0 0px 1px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
+}
 
 .md-field .md-input, .md-field .md-textarea {
     height: 32px;
@@ -98,7 +97,6 @@ h2 {
     background-color: red;
     color: #ffffff;
     border-radius: 3px;
-    margin-bottom: 30px;
     
 }
 
@@ -114,6 +112,7 @@ h2 {
 .container {
     display: flex;
     flex-flow: row wrap;
+    margin: 0;
 }
 
 .delete {
@@ -122,5 +121,32 @@ h2 {
 
 .m-card {
     border-radius: 10px;
+}
+
+.title{
+    margin:0;
+}
+
+textarea {
+    resize:none;
+    padding:10px;
+    border: 1px solid #cdcfcd;
+}
+
+.allComment{
+    box-shadow: -1px 2px 4px 1px rgba(190, 190, 190, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px;
+}
+.subComment{
+    box-shadow: -1px 2px 4px 1px rgba(190, 190, 190, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    margin:20px;
+}
+.comment{
+    margin:auto;
+    text-align: left;
 }
 </style>
