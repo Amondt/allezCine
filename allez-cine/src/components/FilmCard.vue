@@ -16,8 +16,8 @@ export default {
     name: 'card',
     data () {
         return {
-            imageSrc: (this.film.poster_path ? `https://image.tmdb.org/t/p/w500/${this.film.poster_path}` : '/assets/img/salut.png'),
-            type: (this.film.title ? 'movie' : 'tv')
+            imageSrc: this.film.poster_path ? `https://image.tmdb.org/t/p/w500/${this.film.poster_path}` : '/assets/img/salut.png',
+            type: this.film.title ? 'movie' : 'tv'
         }
     },
     props: {

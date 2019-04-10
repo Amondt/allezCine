@@ -44,6 +44,7 @@ export default {
     data () {
         return {
             comments: null,
+            results: null,
         }
     },
     props: {

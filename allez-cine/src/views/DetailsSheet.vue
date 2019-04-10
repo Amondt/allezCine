@@ -2,7 +2,7 @@
     <div id="main">
         <div class="container">
             <div v-if="result === 404">
-                Error
+               Error
             </div>
             <div v-else-if="result">
                 <div id="details">
@@ -10,22 +10,22 @@
                         <div class="flex">
                             <img :src="imageSrc" alt="poster film">
                             <div class="infos">
-                                <div id="stars" v-for="i in 5" :key="i">
+                                <div id="stars" v-for="i in 5" :key="'film'+i">
                                     <font-awesome-icon v-if="5 - Math.round(result.vote_average / 2) < i" icon="star" />
                                     <font-awesome-icon v-else style="color: #9e9e9e;" icon="star" />
                                 </div>
-                                <h1>{{ result.title }} ({{ result.release_date.split('-')[0] }})</h1>
+                                <h1>{{ result.title ? result.title : 'No title' }} ({{ result.release_date.split('-')[0] }})</h1>
                                 <h3>Synopsis</h3>
                                 <p>{{ result.overview }}</p>
                                 <span v-for="(genre, index) in result.genres" :key="index" class="genre">{{ genre.name }}</span>
                             </div>
                         </div>
                     </div>
-                    <div v-else>
+                    <div v-else-if="result.name">
                         <div class="flex">
                             <img :src="imageSrc" alt="poster film">
                             <div class="infos">
-                                <div id="stars" v-for="i in 5" :key="i">
+                                <div id="stars" v-for="i in 5" :key="'serie'+i">
                                     <font-awesome-icon v-if="5 - Math.round(result.vote_average / 2) < i" icon="star" />
                                     <font-awesome-icon v-else style="color: #9e9e9e;" icon="star" />
                                 </div>
@@ -36,11 +36,17 @@
                             </div>
                         </div>
                     </div>
+                    <div v-else>
+                        Loading...
+                    </div>
                 </div>
                 <Commentaries :key="commentKey" :forceRerender="forceRerender"/>
             </div>
             <div v-else>
                 Loading...
+            </div>
+            <div class="moreFilms"> More films...
+                <FilmCard v-for="(random, i) in randomTMDB.slice(0, 4)" :key='i' :film="random" />
             </div>
         </div>
     </div>
@@ -48,32 +54,48 @@
 
 <script>
 
-import { getDetailsTmdb } from '../../apis/tmdbApi/tmdbApiMethods.js'
+import { getDetailsTmdb, getDataTmdbSer, getDataTmdbMov } from '../../apis/tmdbApi/tmdbApiMethods.js'
 import Commentaries from '../components/Commentaries.vue'
+import FilmCard from '../components/FilmCard.vue'
 
 export default {
     name: 'detail',
     components: {
-        Commentaries
+        Commentaries,
+        FilmCard
     },
     data () {
         return {
-            result: null,
-            commentKey: 0
+            result: {},
+            commentKey: 0,
+            randomTMDB: [],
         }
     },
     mounted () {
-        this.result = getDetailsTmdb(this.$route.params.type, this.$route.params.filmId, 'en')
+        getDetailsTmdb(this.$route.params.type, this.$route.params.filmId, 'en').then((result)=>{
+            console.log(result)
+            this.result = result
+            this.moreFunction()
+        })
+        console.log(this.result)
     },
     computed: {
         imageSrc () {
-            return `https://image.tmdb.org/t/p/w500/${this.result ? this.result.poster_path : ''}`
+            return `https://image.tmdb.org/t/p/w500/${this.result && this.result.poster_path ? this.result.poster_path : ''}`
         },
 
     },
     methods: {
         forceRerender() {
         this.commentKey += 1;  
+        },
+        moreFunction() {
+            console.log('test')
+            if (this.result.title) {
+                this.randomTMDB = getDataTmdbMov('en', 'popularity.desc', '1')
+            } else {
+                this.randomTMDB = getDataTmdbSer('en', 'popularity.desc', '1')
+            }
         }
     }
 }
@@ -139,5 +161,4 @@ p {
     border-radius: 6px;
     box-shadow: 0 0 1px 0 gray, 0 1px 10px 0 gray;
 }
-
 </style>
