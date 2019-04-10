@@ -98,18 +98,19 @@ div.data-v-e3565ce0 {
 }
 
 div.carousel {
-    width: 100%;
+  width: 100%;
     /* background-color: blue; */
 }
 
 .carousel-view {
-    width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 1.5em;
 }
 .carousel {
+  width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
