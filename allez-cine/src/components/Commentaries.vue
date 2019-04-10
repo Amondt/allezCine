@@ -17,11 +17,15 @@
         <div class="subComment">
             <div v-if="comments" class="subContainer">
                 <div v-for="(comment, index) in comments" :key="index" class="comment">
-                    <span class="delete" @click="delComment(comment.id)">X</span>
-                    <h3>{{ comment.titleComment }}</h3>
+                    <div class="topDescription">
+                        <h3>{{ comment.titleComment }}</h3>
+                        <span class="delete" @click="delComment(comment.id)" style="font-size:24px;">✗</span>
+                    </div>
                     <p>{{ comment.descriptionComment }}</p>
-                    <p>{{ comment.dateComment }}</p>
-                    <span>{{ comment.counterComment }}</span>
+                    <div class="bottomDescription">
+                        <p>{{new Date (comment.dateComment).toDateString() }}</p>
+                        <span>{{ comment.counterComment }}</span>
+                    </div>
                 </div>
             </div>
             <div v-else>
@@ -71,6 +75,7 @@ export default {
 img {
     float: left;
 }
+
 .md-card{
 box-shadow: 0 0px 0px 0px rgba(0,0,0,.2), 0 0px 1px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12)
 }
@@ -105,10 +110,6 @@ h2 {
     margin: auto;
 }
 
-.comment {
-    width: 250px;
-}
-
 .container {
     display: flex;
     flex-flow: row wrap;
@@ -132,6 +133,14 @@ textarea {
     padding:10px;
     border: 1px solid #cdcfcd;
     width: 100%;
+    outline:none;
+
+}
+textarea:focus{
+  box-shadow: 0 0 5px rgb(241, 218, 218);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgb(241, 218, 218);
 }
 
 .allComment{
@@ -141,17 +150,24 @@ textarea {
     margin: 20px;
 }
 .subComment{
+    padding: 0px;
+    border-radius: 2px;
+}
+.comment {
+    margin: 10px;
+    text-align: left;
     box-shadow: -1px 2px 4px 1px rgba(190, 190, 190, 0.7), -1px 2px 20px rgba(255, 255, 255, 0.6);
     padding: 15px;
-    border-radius: 10px;
-    margin:20px;
-}
-.comment{
-    margin:auto;
-    text-align: left;
+    border-radius: 2px;
+    margin: 20px;
 }
 
 .inputTitle, label {
     width: 100%;
+}
+
+.topDescription, .bottomDescription {
+    display:flex;
+    justify-content: space-between;
 }
 </style>
