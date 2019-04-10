@@ -87,16 +87,16 @@ export default {
     },
     methods: {
         forceRerender() {
-        this.commentKey += 1;  
+        this.commentKey += 1  
         },
         moreFunction() {
             console.log('test')
             if (this.result.title) {
-                this.randomTMDB = getDataTmdbMov('en', 'popularity.desc', '1')
+                this.randomTMDB = getDataTmdbMov('en', 'popularity.desc', `${Math.floor(Math.random() * 1000)}`)
             } else {
-                this.randomTMDB = getDataTmdbSer('en', 'popularity.desc', '1')
+                this.randomTMDB = getDataTmdbSer('en', 'popularity.desc', `${Math.floor(Math.random() * 1000)}`)
             }
-        }
+        },
     }
 }
 </script>
