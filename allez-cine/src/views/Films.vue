@@ -40,5 +40,6 @@ name: 'films',
 .container {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
 }
 </style>
