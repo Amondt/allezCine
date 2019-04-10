@@ -10,7 +10,7 @@
             <div v-else>Loading...</div>
             <div v-if="resultsSer">
                 <h2 class='title'>Series</h2>
-                <div class="container">
+                <div class="contain">
                     <FilmCard v-for="(i, index) in 12" :key='index' :film="resultsSer[i-1]" />
                 </div>
             </div>

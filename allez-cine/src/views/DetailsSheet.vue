@@ -49,7 +49,7 @@
             <v-container class="moreFilms">
                 <h2 class='title'>More Films</h2>
                 <div class="contain">
-                    <FilmCard v-for="(random, i) in randomTMDB.slice(0, 4)" :key='i' :film="random" />
+                    <FilmCard v-for="(random, i) in randomTMDB.slice(0, 5)" :key='i' :film="random" />
                 </div>
             </v-container>
         </div>
