@@ -3,7 +3,7 @@
         <v-container>
             <div v-if="resultsMov">
                 <h2 class='title'>Films</h2>
-                <div class="container">
+                <div class="contain">
                     <FilmCard v-for="(i, index) in 12" :key='index' :film="resultsMov[i-1]" />
                 </div>
             </div>
@@ -51,12 +51,7 @@ export default {
     padding-left: 10px;
 }
 
-.center {
-    display: block;
-    margin: auto;
-}
-
-.container {
+.contain {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
