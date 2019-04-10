@@ -1,7 +1,7 @@
 <template>
     <div id='main'>
         <h2 class='title'>Series</h2>
-        <div class="container">
+        <div class="contain">
             <FilmCard v-for="(serie, index) in results" :key='index' :film="serie" />
         </div> 
     </div> 
@@ -41,8 +41,9 @@ export default {
     margin: auto;
 }
 
-.container {
+.contain {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
 }
 </style>
