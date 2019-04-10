@@ -48,7 +48,7 @@
             
             <v-spacer></v-spacer>
             <v-card light class="px-3 py-1" ripple width="300" style="borderRadius:20px;" id="searchBar">
-                <input type="search" style="padding: 3px;" name="q" aria-label="Search through site content" placeholder="Recherche">
+                <input type="search" style="padding: 3px;width: 100%;" name="q" aria-label="Search through site content" placeholder="Recherche">
             </v-card>
         </v-toolbar>
         <v-layout mt-5 pt-4 mb-3 pl-4>
