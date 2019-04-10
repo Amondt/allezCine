@@ -2,6 +2,11 @@
     <div id="header">
         <v-navigation-drawer v-if="window.width < 960" clipped fixed v-model="drawer" dark app>
             <v-list>
+                <v-list-tile>
+                    <v-list-tile-content>
+                        <h1><span class="titleP1">ALLEZ</span>CINE!</h1>
+                    </v-list-tile-content>
+                </v-list-tile>
                 <v-list-tile router to="/home">
                     <v-list-tile-action>
                         <v-icon>home</v-icon>
@@ -36,26 +41,20 @@
                 <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
             </div>
             <div v-else>
-                <v-btn flat router to="/home">Home</v-btn>
-                <v-btn flat router to="/films">Films Populaires</v-btn>
-                <v-btn flat router to="/series">Séries TV</v-btn>
-
-                <!-- <v-tabs>
-                    <v-tabs-item active-class router to="/home">Home</v-tabs-item>
-                    <v-tabs-item router to="/films">Films Populaires</v-tabs-item>
-                    <v-tabs-item router to="/tv">Séries TV</v-tabs-item>
-                </v-tabs> -->
-                <!-- <router-link to='/home' id="home" :class="['home']">Home</router-link>
-                <router-link to='/films' id="films" :class="['films']">Films Populaires</router-link>
-                <router-link to='/series' id="series" :class="['series']">Séries TV</router-link> -->
+                <v-btn depressed active-class="active" router to="/home">Home</v-btn>
+                <v-btn depressed active-class="active" router to="/films">Films Populaires</v-btn>
+                <v-btn depressed active-class="active" router to="/series">Séries TV</v-btn>
             </div>
             
             <v-spacer></v-spacer>
             <v-card light class="px-3 py-1" ripple width="300" style="borderRadius:20px;" id="searchBar">
-                <input type="search" name="q" aria-label="Search through site content" placeholder="Recherche">
+                <input type="search" style="padding: 3px;" name="q" aria-label="Search through site content" placeholder="Recherche">
             </v-card>
         </v-toolbar>
-        <v-layout mt-5 pt-4>
+        <v-layout mt-5 pt-4 mb-3 pl-4>
+            <h1><span class="titleP1">ALLEZ</span>CINE!</h1>
+        </v-layout>
+        <v-layout>
             <Carousel />
         </v-layout>
     </div>
@@ -95,12 +94,28 @@ export default {
 </script>
 
 <style scoped>
+
+.titleP1 {
+    color: #ED473E;
+    background: none;
+}
+
+h1 {
+    color: #fff;
+    background: none;
+}
+
 #header {
     background: #212121;
 }
 
 #searchBar {
     transition: .1s;
+}
+
+.active {
+    background: none;
+    color: #ED473E;
 }
 
 </style>
