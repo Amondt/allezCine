@@ -8,7 +8,7 @@
                 </div>
             </div>
             <div v-else>Loading...</div>
-            <div v-if="resultsSer">
+            <div v-if="resultsSer" class="mt-5">
                 <h2 class='title'>Series</h2>
                 <div class="contain">
                     <FilmCard v-for="(i, index) in 12" :key='index' :film="resultsSer[i-1]" />
@@ -37,8 +37,8 @@ export default {
         }
     },
     mounted () {
-        this.resultsMov = getDataTmdbMov('en', 'vote_average.desc', '1')
-        this.resultsSer = getDataTmdbSer('en', 'vote_average.desc', '1')
+        this.resultsMov = getDataTmdbMov('en', 'popularity.desc', '1')
+        this.resultsSer = getDataTmdbSer('en', 'popularity.desc', '2')
     }
 }
 </script>
