@@ -45,9 +45,13 @@
             <div v-else>
                 Loading...
             </div>
-            <div class="moreFilms"> More films...
-                <FilmCard v-for="(random, i) in randomTMDB.slice(0, 4)" :key='i' :film="random" />
-            </div>
+
+            <v-container class="moreFilms">
+                <h2 class='title'>More Films</h2>
+                <div class="contain">
+                    <FilmCard v-for="(random, i) in randomTMDB.slice(0, 5)" :key='i' :film="random" />
+                </div>
+            </v-container>
         </div>
     </div>
 </template>
@@ -160,5 +164,17 @@ p {
     background-color: #fcfcfc;
     border-radius: 6px;
     box-shadow: 0 0 1px 0 gray, 0 1px 10px 0 gray;
+}
+
+.title {
+    text-align: left;
+    border-left: 5px solid red;
+    padding-left: 10px;
+}
+
+.contain {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 </style>

@@ -3,14 +3,14 @@
         <v-container>
             <div v-if="resultsMov">
                 <h2 class='title'>Films</h2>
-                <div class="container">
+                <div class="contain">
                     <FilmCard v-for="(i, index) in 12" :key='index' :film="resultsMov[i-1]" />
                 </div>
             </div>
             <div v-else>Loading...</div>
-            <div v-if="resultsSer">
+            <div v-if="resultsSer" class="mt-5">
                 <h2 class='title'>Series</h2>
-                <div class="container">
+                <div class="contain">
                     <FilmCard v-for="(i, index) in 12" :key='index' :film="resultsSer[i-1]" />
                 </div>
             </div>
@@ -37,8 +37,8 @@ export default {
         }
     },
     mounted () {
-        this.resultsMov = getDataTmdbMov('en', 'vote_average.desc', '1')
-        this.resultsSer = getDataTmdbSer('en', 'vote_average.desc', '1')
+        this.resultsMov = getDataTmdbMov('en', 'popularity.desc', '1')
+        this.resultsSer = getDataTmdbSer('en', 'popularity.desc', '2')
     }
 }
 </script>
@@ -51,12 +51,7 @@ export default {
     padding-left: 10px;
 }
 
-.center {
-    display: block;
-    margin: auto;
-}
-
-.container {
+.contain {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
