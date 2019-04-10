@@ -68,7 +68,7 @@ export default {
     name: 'menuTop',
     data(){
         return {
-            drawer: true,
+            drawer: false,
             window: {
                 width: 0,
                 height: 0

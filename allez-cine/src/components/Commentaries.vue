@@ -5,11 +5,11 @@
             <form id="addCom" @submit="addComment">
                 <div class='inputTitle'>
                     <label for="title"></label>
-                    <textarea style="width: 600px; height: 40px;" placeholder='Titre...' name="title"/>
+                    <textarea style="height: 50px; border-radius: 15px;" placeholder='Titre...' name="title"/>
                 </div>
                 <div class="inputComment">
                     <label for="comment"></label>
-                    <textarea style="width: 600px; height: 100px;" placeholder="Ajouter un commentaire..." class="textComment" name="comment"/>
+                    <textarea style="height: 150px; border-radius: 15px;" placeholder="Ajouter un commentaire..." class="textComment" name="comment"/>
                 </div>
                 <md-button class="md-raised md-primary" type="submit">Ajouter le commentaire</md-button>
             </form>
@@ -67,6 +67,7 @@ export default {
 </script>
 
 <style scoped>
+
 img {
     float: left;
 }
@@ -96,8 +97,7 @@ h2 {
 .md-primary {
     background-color: red;
     color: #ffffff;
-    border-radius: 3px;
-    
+    border-radius: 3px;  
 }
 
 #comments {
@@ -131,6 +131,7 @@ textarea {
     resize:none;
     padding:10px;
     border: 1px solid #cdcfcd;
+    width: 100%;
 }
 
 .allComment{
@@ -148,5 +149,9 @@ textarea {
 .comment{
     margin:auto;
     text-align: left;
+}
+
+.inputTitle, label {
+    width: 100%;
 }
 </style>
