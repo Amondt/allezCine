@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const url = 'http://192.168.1.10/allez-cine/';
+const url = 'http://10.20.1.37/allez-cine/';
 
 export function getComments (filmId) {
     const req = new XMLHttpRequest()
