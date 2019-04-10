@@ -30,6 +30,7 @@ export default {
     methods: {
         displayDetails() {
             this.$router.push(`/details/${this.type}/${this.film.id}`)
+            window.scrollTo({ top: 0, behavior: 'smooth' })
         }
     }
 }
