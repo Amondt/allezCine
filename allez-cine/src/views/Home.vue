@@ -1,19 +1,21 @@
 <template>
     <div id="main">
-        <div v-if="resultsMov">
-            <h2 class='title'>Films</h2>
-            <div class="container">
-                <FilmCard v-for="(i, index) in 12" :key='index' :film="resultsMov[i-1]" />
+        <v-container>
+            <div v-if="resultsMov">
+                <h2 class='title'>Films</h2>
+                <div class="container">
+                    <FilmCard v-for="(i, index) in 12" :key='index' :film="resultsMov[i-1]" />
+                </div>
             </div>
-        </div>
-        <div v-else>Loading...</div>
-        <div v-if="resultsSer">
-            <h2 class='title'>Series</h2>
-            <div class="container">
-                <FilmCard v-for="(i, index) in 12" :key='index' :film="resultsSer[i-1]" />
+            <div v-else>Loading...</div>
+            <div v-if="resultsSer">
+                <h2 class='title'>Series</h2>
+                <div class="container">
+                    <FilmCard v-for="(i, index) in 12" :key='index' :film="resultsSer[i-1]" />
+                </div>
             </div>
-        </div>
-        <div v-else>Loading...</div>
+            <div v-else>Loading...</div>
+        </v-container>
     </div>
 </template>
 
@@ -57,6 +59,7 @@ export default {
 .container {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 </style>
