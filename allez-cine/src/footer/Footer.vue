@@ -1,10 +1,9 @@
 <template>
-   
-
     <div id='lower'>
         <div id='lower-wrapper'>
            
             <h1><span>ALLEZ</span>CINE!</h1>
+            <br>
             
             <div id="footerMenus">
 
@@ -17,7 +16,7 @@
                 </b>
                 </div>
 
-
+                <br>
                 <div id='lowerbar-wrapper'>
                 <b class='lowerbar' id='lowerbar2' preferred='yes'>
                 <div><h2>COMMUNAUTE</h2></div>
@@ -29,7 +28,7 @@
                 </b>
                 </div>
 
-
+                <br>
                 <div id='lowerbar-wrapper'>
                 <b class='lowerbar' id='lowerbar3' preferred='yes'>
                 <div><h2>LEGAL</h2></div>
@@ -42,9 +41,6 @@
             <div style='clear: both;'/>
         </div>
     </div>
-        
-        
-    
 </template>
 
 <script>
@@ -54,39 +50,38 @@ export default {
 </script>
 
 <style scoped>
-    
+span {
+    color: #ED473E;
+}
 
-    span {
-        color: red;
-    }
+h1 {
+    color: #fff;
+    margin-bottom: 80px;
+    text-align: left;
+}
 
-    h1 {
-        color: #ffffff;
-        margin-bottom: 80px;
-        text-align: left;
-    }
+#footerMenus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
-    #footerMenus {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    
-    #lower {
+#lower {
     margin:auto;
     padding: 10px;
     width: 100%;
     background:#262626;
-    }
-    #lower-wrapper {
+}
+
+#lower-wrapper {
     background:#262626;
     margin:auto;
     padding: 20px 0px 20px 0px ;
     width: 80vw;
     border:0;
-    }
+}
 
-    #lowerbar-wrapper {
+#lowerbar-wrapper {
     background:#262626;
     float: left;
     margin: 0px 5px auto;
@@ -97,10 +92,13 @@ export default {
     line-height: 1.6em;
     word-wrap: break-word;
     overflow: hidden;
-    }
-    .lowerbar {margin: 0; padding: 0;}
-    .lowerbar .widget {margin: 0; padding: 10px 20px 0px 20px;}
-    .lowerbar h2 {
+}
+
+.lowerbar {margin: 0; padding: 0;}
+
+.lowerbar .widget {margin: 0; padding: 10px 20px 0px 20px;}
+
+.lowerbar h2 {
     margin: 0px 0px 10px 0px;
     padding: 3px 0px 3px 0px;
     text-align: justify;
@@ -108,14 +106,16 @@ export default {
     color:rgb(255, 255, 255);
     text-transform:uppercase;
     font: bold 14px Arial, Tahoma, Verdana;
-    }
-    .lowerbar ul {
+}
+
+.lowerbar ul {
     color:#fff;
     margin: 0 auto;
     padding: 0;
     list-style-type: none;
-    }
-    .lowerbar li {
+}
+
+.lowerbar li {
     display:block;
     color:#fff;
     line-height: 1.6em;
@@ -124,92 +124,90 @@ export default {
     border-bottom: 1px solid #222;
     border-top: 1px solid #444;
     list-style-type: none;
-    }
-    .lowerbar li a {
+}
+
+.lowerbar li a {
     text-decoration:none; color: #DBDBDB;
-    }
-    .lowerbar li a:hover {
+}
+
+.lowerbar li a:hover {
     text-decoration:underline;
-    }
-    .lowerbar li:hover {
+}
+
+.lowerbar li:hover {
     display:block;
     background: #222;
-    }
-    a {
-        text-decoration: none;
-        color: #ffffff;
-        line-height: 2.5em;
-    }
-    a:hover {
-        text-decoration: underline;
-        color: red;
-        line-height: 2.5em;
-    }
+}
 
-    @media screen and (max-width: 640px) {
+a {
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 2.5em;
+}
 
-        #footerMenus {
+a:hover {
+    text-decoration: underline;
+    color: red;
+    line-height: 2.5em;
+}
+
+@media only screen and (max-width: 640px) {
+    #footerMenus {
         display: flex;
         flex-direction: column;
         margin: 0px auto;
         justify-content: space-between;
     }
 
+    .lowerbar {
+        text-align: center;
+    }
+
     #lowerbar-wrapper {
-    background-color:transparent;
-    float: left;
-    display: block;
-    flex-direction: column;
-    margin: auto;
-    padding-bottom: 20px;
-    text-align: left;
-    color:rgb(255, 255, 255);
-    font: normal 16px Arial, Tahoma, Verdana;
-    line-height: 1.6em;
-    word-wrap: break-word;
-    overflow: hidden;
-    font-size: 1em;
-    margin-left: 10px;
+        background-color:transparent;
+        display: block;
+        flex-direction: column;
+        margin: 0 auto!important;
+        padding-bottom: 20px;
+        text-align: left;
+        color:rgb(255, 255, 255);
+        font: normal 16px Arial, Tahoma, Verdana;
+        line-height: 1.6em;
+        word-wrap: break-word;
+        overflow: hidden;
+        font-size: 1em;
+        margin-left: 10px;
     }
-   
-   .lowerbar h2[data-v-602ad626] {
-    margin: 0px 0px 10px 0px;
-    padding: 3px 0px 3px 0px;
-    text-align: justify;
-    border: 0;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    font: bold 0.8em Arial, Tahoma, Verdana;
-}
 
-        #lower-wrapper {
-    background:#262626;
-    margin:auto;
-   padding: 20px 0px 20px 78px;
-    width: 80vw;
-    border:0;
+    .lowerbar h2[data-v-602ad626] {
+        margin: 0px 0px 10px 0px;
+        padding: 3px 0px 3px 0px;
+        text-align: justify;
+        border: 0;
+        color: rgb(255, 255, 255);
+        text-transform: uppercase;
+        font: bold 0.8em Arial, Tahoma, Verdana;
     }
-        
-        
-        
 
+    #lower-wrapper {
+        background:#262626;
+        margin:auto;
+        padding: 20px 0;
+        width: 80vw;
+        border:0;
+    }
 
     h1 {
         font-size: 1.5em;
         margin-bottom: 19px;
-
     }
- 
+
     span {
         font-size:1em;
     }
 
-
-  }
-
-
-
-
-
-
+    h2 {
+        text-align: center!important;
+    }
+}
 </style>
