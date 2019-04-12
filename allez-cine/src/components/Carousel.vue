@@ -1,9 +1,13 @@
 <template>
   <div class='carousel-view'>
+     <div class="textInImg">
+       <h1>LATEST <span>ON</span>LINE <span>MO</span>VIES </h1>
+     </div>
     <div v-if="films">
       <transition-group
         class='carousel'
         tag="div">
+       
         <div
           v-for="(slide, index) in slides" 
           class='slide'
@@ -11,6 +15,7 @@
           @click="displayDetails(slide.id)">
             <img :src="slide.imageSrc" alt="poster image">
         </div>
+        
       </transition-group>
     </div>
     <div v-else></div>
@@ -86,6 +91,20 @@ export default {
 
 
 <style scoped>
+
+.textInImg {
+  color:#fff;
+  text-align: center;
+  position: relative;
+  top:0px;
+  width:80%;
+  background-color:transparent;
+  height: 70px;
+}
+
+span {
+  color:red;
+}
 
 
 div.data-v-e3565ce0 {
