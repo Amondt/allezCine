@@ -25,7 +25,6 @@ name: 'films',
     },
     created () {
         this.results = getDataTmdbMov('en', 'popularity.desc', '1')
-
     }
 }
 </script>
