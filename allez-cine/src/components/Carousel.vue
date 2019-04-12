@@ -180,11 +180,12 @@ button:hover {
 
 @media only screen and (max-width: 600px) {
     .slide[data-v-e3565ce0][data-v-e3565ce0]{
-          flex: 1 0 19em;
+          flex: 1 0 13em;
           margin: 4px;
     }
     img{
-      width: 30%
+      width: 80%;
+      height: 230px!important;
     }
 }
 
