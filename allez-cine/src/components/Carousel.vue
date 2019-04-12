@@ -7,18 +7,8 @@
       <transition-group
         class='carousel'
         tag="div">
-<<<<<<< HEAD
-       
-        <div
-          v-for="(slide, index) in slides" 
-          class='slide'
-          :key="index"
-          @click="displayDetails(slide.id)">
-            <img :src="slide.imageSrc" alt="poster image">
-=======
         <div v-for="(slide, index) in slides" class='slide' :key="index" @click="displayDetails(slide.id)">
             <img :src="slide.imageSrc" alt="poster image" class="query">
->>>>>>> 10eb5bca64cbc9a6b00dbf51831ea13e348bb805
         </div>
         
       </transition-group>
