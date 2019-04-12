@@ -177,13 +177,18 @@ button:hover {
     margin: 0.4em auto;
   }
 }
-/* @media only screen and (max-width: 600px) {
-    .query {
-        height: 200px;
+
+@media only screen and (max-width: 600px) {
+    .slide[data-v-e3565ce0][data-v-e3565ce0]{
+          flex: 1 0 19em;
+          margin: 4px;
+    }
+    img{
+      width: 30%
     }
 }
-/*  */
-@media only screen and (min-width: 1200px) {
+
+/* @media only screen and (min-width: 1200px) {
     .flex {
 
     }
@@ -207,5 +212,5 @@ button:hover {
         flex-direction: column;
         text-align: left;
     }
-}
+} */
 </style>
