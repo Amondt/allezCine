@@ -1,5 +1,5 @@
 /* eslint-disable no-console */
-const url = 'http://10.20.1.37/allez-cine/';
+const url = 'http://localhost:8888/test-php/back-end/';
 
 export function getComments (filmId) {
     const req = new XMLHttpRequest()

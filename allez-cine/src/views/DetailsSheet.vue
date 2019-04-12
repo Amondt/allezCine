@@ -45,7 +45,6 @@
             <div v-else>
                 Loading...
             </div>
-
             <v-container class="moreFilms">
                 <h2 class='title'>More Films</h2>
                 <div class="contain">
@@ -113,6 +112,11 @@ export default {
         text-align: left;
     }
 }
+@media only screen and (min-width: 960px){
+.container {
+    max-width: 1000px;
+}
+}
 @media only screen and (max-width: 1200px) {
     .flex {
         display: flex;
@@ -175,6 +179,6 @@ p {
 .contain {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: start;
 }
 </style>

@@ -7,6 +7,10 @@ import 'vue-material/dist/vue-material.min.css'
 
 Vue.use(VueMaterial)
 
+import infiniteScroll from 'vue-infinite-scroll'
+
+Vue.use(infiniteScroll)
+
 import Home from './views/Home.vue'
 import Films from './views/Films.vue'
 import Series from './views/Series.vue'
@@ -60,7 +64,15 @@ const router = new VueRouter({
     mode: 'history'
 })
 
+import axios from 'axios'
+
+Vue.prototype.$http = axios
+
+
 new Vue({
     router,
     render: h => h(App),
 }).$mount('#app')
+
+
+

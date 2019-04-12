@@ -7,6 +7,7 @@
       <transition-group
         class='carousel'
         tag="div">
+<<<<<<< HEAD
        
         <div
           v-for="(slide, index) in slides" 
@@ -14,6 +15,10 @@
           :key="index"
           @click="displayDetails(slide.id)">
             <img :src="slide.imageSrc" alt="poster image">
+=======
+        <div v-for="(slide, index) in slides" class='slide' :key="index" @click="displayDetails(slide.id)">
+            <img :src="slide.imageSrc" alt="poster image" class="query">
+>>>>>>> 10eb5bca64cbc9a6b00dbf51831ea13e348bb805
         </div>
         
       </transition-group>
@@ -21,7 +26,6 @@
     <div v-else></div>
   </div>
 </template>
-
 
 <script>
 
@@ -118,7 +122,6 @@ div.data-v-e3565ce0 {
 
 div.carousel {
   width: 100%;
-    /* background-color: blue; */
 }
 
 .carousel-view {
@@ -201,5 +204,36 @@ button:hover {
     display: block;
     margin: 0.4em auto;
   }
+}
+/* @media only screen and (max-width: 600px) {
+    .query {
+        height: 200px;
+    }
+}
+/*  */
+@media only screen and (min-width: 1200px) {
+    .flex {
+
+    }
+}
+@media only screen and (min-width: 960px){
+.container {
+    max-width: 1000px;
+}
+}
+
+@media only screen and (max-width: 992px) {
+    .flex {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .flex {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
 }
 </style>
