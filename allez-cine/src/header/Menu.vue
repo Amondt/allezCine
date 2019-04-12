@@ -1,5 +1,6 @@
 <template>
     <div id="header">
+        
         <v-navigation-drawer v-if="window.width < 960" clipped fixed v-model="drawer" dark app>
             <v-list>
                 <v-list-tile>
@@ -7,6 +8,7 @@
                         <h1><span class="titleP1">ALLEZ</span>CINE!</h1>
                     </v-list-tile-content>
                 </v-list-tile>
+
                 <v-list-tile router to="/home">
                     <v-list-tile-action>
                         <v-icon>home</v-icon>
@@ -33,6 +35,10 @@
                         <v-list-tile-title>Séries TV</v-list-tile-title>
                     </v-list-tile-content>
                 </v-list-tile>
+
+                <!-- <v-list-tile-content style="width: fit-content;padding: 10px;">
+                    <searchBar :isMobile='false' class="inputHamburger"/>        
+                </v-list-tile-content> -->
             </v-list>
         </v-navigation-drawer>
 
@@ -47,9 +53,9 @@
             </div>
             
             <v-spacer></v-spacer>
-            <v-card light class="px-3 py-1" ripple width="300" style="borderRadius:20px;" id="searchBar">
-                <input type="search" style="padding: 3px;width: 100%;" name="q" aria-label="Search through site content" placeholder="Recherche">
-            </v-card>
+            <!-- <v-card light class="px-3 py-1" ripple width="300" style="borderRadius:20px;" id="searchBar"> -->
+                <searchBar :isMobile='false' class="hidden-sm-and-down"/>        
+            <!-- </v-card> -->
         </v-toolbar>
         <v-layout mt-5 pt-4 mb-3 pl-4>
             <h1><span class="titleP1">ALLEZ</span>CINE!</h1>
@@ -62,6 +68,7 @@
 
 <script>
 import Carousel from '../components/Carousel.vue'
+import searchBar from '../header/searchBar.vue'
 
 export default {
     name: 'menuTop',
@@ -75,7 +82,8 @@ export default {
         }
     },
     components: {
-        Carousel
+        Carousel,
+        searchBar
     },
     created() {
         window.addEventListener('resize', this.handleResize)
@@ -118,4 +126,8 @@ h1 {
     color: #ED473E;
 }
 
+.v-toolbar__content {
+    padding: 0 !important;
+    margin-right: 10px;
+}
 </style>

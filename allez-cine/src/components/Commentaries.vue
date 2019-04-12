@@ -38,6 +38,7 @@
 <script>
 
 import { getComments, createComment, deleteComment } from '../../apis/commentsDbApi/commentsDbApiMethods.js'
+import axios from "axios";
 
 export default {
     name: 'commentaries',
