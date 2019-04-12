@@ -29,9 +29,6 @@ export default {
         }
     },
     created () {
-<<<<<<< HEAD
-        this.results = getDataTmdbMov('en', 'popularity.desc', '1')
-=======
         this.films = getDataTmdbMov('en', 'popularity.desc', '1')
     },
     methods:{
@@ -64,7 +61,6 @@ export default {
     }, 
     mounted(){
         this.scroll = this.films
->>>>>>> acfc03f51ca464dd049586a6b4e15d59cad1ad16
     }
 }
 </script>
