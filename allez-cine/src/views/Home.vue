@@ -54,7 +54,7 @@ export default {
 .contain {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: start;
 }
 
 </style>
