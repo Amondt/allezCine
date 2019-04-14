@@ -15,8 +15,12 @@ AllezCine est un projet de groupe basé sur le site The Movie DB. L'objectif est
 
 ## Procédures d’installation:
 ````
-npm install
-npm run serve, 
+npm install : permettant d'installer un package et ceux dont il dépend.
+npm install vuetify --save : installation d'un framework de VueJs.
+npm install axios : client HTTP Promise-based permettant facilement d'envoyer des requêtes HTTP asynchrones.
+
+npm run serve
+
 ````
 
 ## Problèmes rencontrées: 
