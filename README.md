@@ -25,7 +25,7 @@ La page est divisée en plusieurs parties :
 * Views: différentes pages disponibles ->
 1. Home.vue : page d'accueil
 2. Films.vue & Series.vue : affiche les 40 films & séries les plus tendances (avec un scroll infini)
-3. DétailsSheet.vue : affiche les détails d'un film ou d'une série en particulier, et communique l'API pour aller chercher et/ou poster des commentaires.
+3. DetailsSheet.vue : affiche les détails d'un film ou d'une série en particulier, et communique l'API pour aller chercher et/ou poster des commentaires.
 * Header : barre de navigation comprenant une barre de recherche
 * Footer: à propos, contact...
 
