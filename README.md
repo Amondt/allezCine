@@ -10,9 +10,9 @@ npm install
 npm run serve, 
 ````
 ## Notre équipe : 
-Elisa RENDA https://github.com/elisarenda
-Alexandre ADMONDT https://github.com/Amondt
-Andres GOLDESTEIN https://github.com/AndresGol
+* Elisa RENDA https://github.com/elisarenda
+* Alexandre ADMONDT https://github.com/Amondt
+* Andres GOLDESTEIN https://github.com/AndresGol
 
 ## Rôle de chacun: 
 Back-End: gérer par Alexandre Mondt et Elisa Renda
