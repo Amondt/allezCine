@@ -44,9 +44,3 @@ npm install : permet d'installer un package et ceux dont il dépend
 npm run serve
 
 ````
-
-## Problèmes rencontrées: 
-Utilisation de github 
-
-## Elements manquants:
-
