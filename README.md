@@ -33,7 +33,7 @@ La page est divisée en plusieurs parties :
 ````
 npm install vuetify --save : installation d'un framework de VueJs
 npm install axios : permet facilement d'envoyer des requêtes HTTP asynchrones
-npm install : permettant d'installer un package et ceux dont il dépend
+npm install : permet d'installer un package et ceux dont il dépend
 npm run serve
 
 ````
