@@ -1,30 +1,26 @@
-# allezCine
-AllezCine project
+# allezCine 
 
+## Description du projet: 
 
-- Nom du projet : Allez Ciné
+AllezCine est un projet de groupe basé sur le site The Movie DB. L'objectif est de créer un site permettant de récuperer les films et les séries via l'API TheMovieDb. Pour se faire, nous employerons PHP, VueJS et MySQL pour développer notre site.
 
-- Description projet: 
-Utilisation API TheMovieDb (récupérations de données)
-Utilisation de component avec VueJs (faire relation entre parents et enfants)
-
-- Procédures d’installation:
+## Procédures d’installation:
 ````
 npm install
 npm run serve, 
 ````
-- Noms personnes: 
+## Notre équipe : 
 Elisa RENDA https://github.com/elisarenda
 Alexandre ADMONDT https://github.com/Amondt
 Andres GOLDESTEIN https://github.com/AndresGol
 
-- Descriptif: 
+## Rôle de chacun: 
 Back-End: gérer par Alexandre Mondt et Elisa Renda
 Front-End: gérer par Andres
 
-- Problèmes rencontrées: 
-Utilisation de github, 
+## Problèmes rencontrées: 
+Utilisation de github 
 
-- Elements manquants:
+## Elements manquants:
 bonus & hamburger menu
 
