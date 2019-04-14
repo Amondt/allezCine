@@ -9,24 +9,25 @@ AllezCine est un projet de groupe basé sur le site The Movie DB. L'objectif est
 * Alexandre ADMONDT https://github.com/Amondt
 * Andres GOLDESTEIN https://github.com/AndresGol
 
-## Back-End & Front-End: 
-* Back-End: 
+## Back-End::
+I. Back-End: 
 Le back-end du projet a été créé en PHP sur base d'une base de données MySQL.
 
-* Front-End: 
+## Front-End: 
+I. Front-End: 
 Le front-end du projet a été créé via VueCLI et le framework Vuetify.
 La page est divisée en plusieurs parties :
-- Router-view : redirige vers les différents components en fonction du chemin d'accès de l'url.
-- Components : regroupant nos différents components => 
+II. Router-view : redirige vers les différents components en fonction du chemin d'accès de l'url.
+III. Components : regroupant nos différents components => 
 * Carrousel : slideshow des films les plus tendances
 * Commentaire : ajouts/retraits de commentaires
 * FilmCard : affichage film 
-- Views: différentes pages disponibles => 
+IV. Views: différentes pages disponibles => 
 * Home.vue : page d'accueil
 * Films.vue & Series.vue : affiche les 40 films & séries les plus tendances (avec un scroll infini)
 * DétailsSheet.vue : affiche les détails d'un film ou d'une série en particulier, et communique l'API pour aller chercher et/ou poster des commentaires.
-- Header : barre de navigation comprenant une barre de recherche
-- Footer: à propos, contact...
+V. Header : barre de navigation comprenant une barre de recherche
+VI. Footer: à propos, contact...
 
 ## Procédures d’installation:
 ````
