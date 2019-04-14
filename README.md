@@ -14,8 +14,8 @@ AllezCine est un projet de groupe basé sur le site The Movie DB. L'objectif est
 Le back-end du projet a été créé en PHP sur base d'une base de données MySQL.
 
 ## Front-End: 
-* Front-End: 
 Le front-end du projet a été créé via VueCLI et le framework Vuetify.
+
 La page est divisée en plusieurs parties :
 * Router-view : redirige vers les différents components en fonction du chemin d'accès de l'url.
 * Components : regroupe nos différents components ->
