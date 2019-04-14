@@ -15,8 +15,8 @@ npm run serve,
 * Andres GOLDESTEIN https://github.com/AndresGol
 
 ## Rôle de chacun: 
-Back-End: gérer par Alexandre Mondt et Elisa Renda
-Front-End: gérer par Andres
+* Back-End: gérer par Alexandre Mondt et Elisa Renda
+* Front-End: gérer par Andres
 
 ## Problèmes rencontrées: 
 Utilisation de github 
