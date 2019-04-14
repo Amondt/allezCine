@@ -200,10 +200,17 @@ button:hover {
     .slide[data-v-e3565ce0][data-v-e3565ce0]{
           flex: 1 0 13em;
           margin: 4px;
+          height: 0;
+    }
+    .textInImg[data-v-e3565ce0] {
+      height: 0;
     }
     img{
       width: 80%;
       height: 230px!important;
+    }
+    h1{
+      font-size: 25px;
     }
 }
 

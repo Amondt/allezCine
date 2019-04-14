@@ -43,7 +43,7 @@
         </v-navigation-drawer>
 
         <v-container>
-            <v-toolbar app fixed clipped-left flat absolute dark px-0 mx-0>
+            <v-toolbar app fixed clipped-left flat absolute dark pa-0>
                 <v-toolbar-side-icon @click.stop="drawer = !drawer" v-if="window.width < 960"></v-toolbar-side-icon>
                 <v-toolbar-title v-else>
                     <v-btn depressed active-class="active" router to="/home">Home</v-btn>
@@ -105,7 +105,7 @@ export default {
 <style scoped>
 
 .titleP1 {
-    color: #ED473E;
+    color: red;
     background: none;
 }
 
@@ -130,5 +130,13 @@ h1 {
 .v-toolbar__content .v-toolbar__extension {
     padding: 0!important;
     margin-right: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+.pl-4 {
+    padding-left: 24px !important;
+    display: flex;
+    justify-content: center;
+}
 }
 </style>
