@@ -10,7 +10,7 @@ AllezCine est un projet de groupe basé sur le site The Movie DB. L'objectif est
 * Andres GOLDESTEIN https://github.com/AndresGol
 
 ## Back-End::
-I. Back-End: 
+1. Back-End: 
 Le back-end du projet a été créé en PHP sur base d'une base de données MySQL.
 
 ## Front-End: 
