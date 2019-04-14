@@ -11,7 +11,7 @@ AllezCine est un projet de groupe basé sur le site The Movie DB. L'objectif est
 
 ## Rôle de chacun: 
 * Back-End: gérer par Alexandre Mondt et Elisa Renda
-* Front-End: gérer par Andres
+* Front-End: gérer par Andres Goldenstein
 
 ## Procédures d’installation:
 ````
