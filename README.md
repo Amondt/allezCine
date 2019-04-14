@@ -14,20 +14,20 @@ I. Back-End:
 Le back-end du projet a été créé en PHP sur base d'une base de données MySQL.
 
 ## Front-End: 
-I. Front-End: 
+1. Front-End: 
 Le front-end du projet a été créé via VueCLI et le framework Vuetify.
 La page est divisée en plusieurs parties :
-II. Router-view : redirige vers les différents components en fonction du chemin d'accès de l'url.
-III. Components : regroupant nos différents components => 
+2. Router-view : redirige vers les différents components en fonction du chemin d'accès de l'url.
+3. Components : regroupant nos différents components => 
 * Carrousel : slideshow des films les plus tendances
 * Commentaire : ajouts/retraits de commentaires
 * FilmCard : affichage film 
-IV. Views: différentes pages disponibles => 
+4. Views: différentes pages disponibles => 
 * Home.vue : page d'accueil
 * Films.vue & Series.vue : affiche les 40 films & séries les plus tendances (avec un scroll infini)
 * DétailsSheet.vue : affiche les détails d'un film ou d'une série en particulier, et communique l'API pour aller chercher et/ou poster des commentaires.
-V. Header : barre de navigation comprenant une barre de recherche
-VI. Footer: à propos, contact...
+5. Header : barre de navigation comprenant une barre de recherche
+6. Footer: à propos, contact...
 
 ## Procédures d’installation:
 ````
