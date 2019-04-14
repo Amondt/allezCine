@@ -18,7 +18,7 @@ Le back-end du projet a été créé en PHP sur base d'une base de données MySQ
 Le front-end du projet a été créé via VueCLI et le framework Vuetify.
 La page est divisée en plusieurs parties :
 * Router-view : redirige vers les différents components en fonction du chemin d'accès de l'url.
-* Components : regroupant nos différents components ->
+* Components : regroupe nos différents components ->
 1. Carrousel : slideshow des films les plus tendances
 2. Commentaire : ajouts/retraits de commentaires
 3. FilmCard : affichage film 
