@@ -101,9 +101,9 @@ span {
 }
 
 
-div.data-v-e3565ce0 {
+/* div.data-v-e3565ce0 {
   width: 100vw;
-}
+} */
 
 
 .md-field {
@@ -157,6 +157,7 @@ div.carousel {
 img {
   height: 100%!important;
   transition: .1s;
+  width: 250px;
 }
 img:hover {
   border: 1px solid #5c5c5c;
