@@ -36,11 +36,11 @@ const routes = [
         name: 'home',
         component: Home
     },
-    {
-        path: '/home',
-        name: 'home',
-        component: Home
-    },
+    // {
+    //     path: '/home',
+    //     name: 'home',
+    //     component: Home
+    // },
     {
         path: '/films',
         name: 'films',

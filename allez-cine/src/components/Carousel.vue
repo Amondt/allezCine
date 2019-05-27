@@ -112,6 +112,7 @@ div.data-v-e3565ce0 {
 
 div.carousel {
   width: 100%;
+  height: 200px;
 }
 
 .carousel-view {

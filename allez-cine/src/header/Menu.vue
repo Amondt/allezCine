@@ -9,7 +9,7 @@
                     </v-list-tile-content>
                 </v-list-tile>
 
-                <v-list-tile router to="/home">
+                <v-list-tile router to="/">
                     <v-list-tile-action>
                         <v-icon>home</v-icon>
                     </v-list-tile-action>
@@ -46,7 +46,7 @@
             <v-toolbar app fixed clipped-left flat absolute dark pa-0>
                 <v-toolbar-side-icon @click.stop="drawer = !drawer" v-if="window.width < 960"></v-toolbar-side-icon>
                 <v-toolbar-title v-else>
-                    <v-btn depressed active-class="active" router to="/home">Home</v-btn>
+                    <v-btn depressed active-class="active" router to="/">Home</v-btn>
                     <v-btn depressed active-class="active" router to="/films">Films Populaires</v-btn>
                     <v-btn depressed active-class="active" router to="/series">Séries TV</v-btn>
                 </v-toolbar-title>
