@@ -2,28 +2,24 @@
     <div class='autocomplete'>
         <input 
         type="text" 
-        v-model="search" 
         class="searchBar" 
-        placeholder="Recherche" 
-        @input="onChange()"
+        v-model="search" 
+        placeholder="Search..." 
+        @input="onLink()"
+        @submit="getDetails(this.id,this.mediaType)"
         @keydown.down="onArrowDown()"
         @keydown.up="onArrowUp()"
         @keydown.enter="onEnter()"
-        @submit="gotoDetails(this.id,this.mediaType)"
         >
-        <ul v-show="isOpen" :class="[isMobile? 'autocomplete-results-mobile' : 'autocomplete-results']">
-            <li 
-                class="loading" 
-                v-if="isLoading">
+        <ul v-show="isOpen" :class="[isMobile? 'autocomplete-results-mobile' : 'autoCompleteResults']">
+            <li class="loading" v-if="isLoading">
                 Recherche en cours...
             </li>
-            <li 
-                v-else 
+            <li class="autoCompleteResult" v-else 
                 v-for="(result,index) in results"
                 :key="index"
+                :class="{ 'isActive': index === arrowCounter }"
                 @click="setResult(result)"
-                class="autocomplete-result"
-                :class="{ 'is-active': index === arrowCounter }"
             >
                 {{ result.name }}
             </li>
@@ -52,7 +48,7 @@ export default {
         isMobile : Boolean
     },
     methods: {
-        onChange : debounce(function(){
+        onLink : debounce(function(){
             if (this.isLoading){
                 this.isOpen = false
             } else {
@@ -113,7 +109,7 @@ export default {
             this.mediaType = this.results[this.arrowCounter].mediaType;
             this.isOpen = false;
             this.arrowCounter = -1;
-            this.gotoDetails(this.id,this.mediaType);
+            this.getDetails(this.id,this.mediaType);
         },
         handleClickOutside(evt) {
             if (!this.$el.contains(evt.target)) {
@@ -123,7 +119,7 @@ export default {
                 this.arrowCounter = -1;
             }
         },
-        gotoDetails(id,media){
+        getDetails(id,media){
             this.$router.push({
                 path : `/details/${media}/${id}`
             })
@@ -151,7 +147,7 @@ export default {
         padding: 5px;
         padding-left:20px;
     }
-    .autocomplete-results {
+    .autoCompleteResults {
         position: fixed;
         top: 45px;
         right: 35px;
@@ -176,14 +172,14 @@ export default {
         width: 194px;
         z-index: 5;
     }
-    .autocomplete-result {
+    .autoCompleteResult {
         list-style: none;
         text-align: left;
         padding: 4px 2px;
         cursor: pointer;
     }
-    .autocomplete-result.is-active,
-    .autocomplete-result:hover {
+    .autoCompleteResult.isActive,
+    .autoCompleteResult:hover {
         background-color: #000000;
         color: white;
     }
